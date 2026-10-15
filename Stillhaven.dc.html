@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<script src="./banner.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&amp;family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;1,14..32,400&amp;family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&amp;display=swap" rel="stylesheet">
+<style>
+html{min-height:100%;background-color:#0d1a30;background-image:linear-gradient(180deg,rgba(13,26,48,.96) 0%,rgba(20,34,62,.84) 14%,rgba(32,40,78,.66) 32%,rgba(48,46,88,.54) 50%,rgba(64,52,92,.5) 68%,rgba(84,62,94,.5) 85%,rgba(96,70,94,.52) 100%),url(stars.svg);background-size:100% 148vh,cover;background-position:top center,center;background-repeat:no-repeat,no-repeat;background-attachment:fixed,fixed}body{margin:0;padding:0;min-height:100%}
+a{color:#d3c0ec;text-decoration:none}a:hover{color:#dcc9f2;text-decoration:underline}
+@keyframes breath{0%{transform:scale(.55);opacity:.55}40%{transform:scale(1);opacity:.95}100%{transform:scale(.55);opacity:.55}}
+@keyframes ink{0%{transform:scale(0);opacity:0}12%{opacity:1}100%{transform:scale(9);opacity:1}}
+@keyframes sink{0%{opacity:1;filter:blur(0)}60%{opacity:.5;filter:blur(2px)}100%{opacity:0;filter:blur(7px)}}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+button,textarea,input,select{font-family:inherit}textarea::placeholder,input::placeholder{color:rgba(226,238,245,.5)}@keyframes rip{0%{transform:translate(-50%,-50%) scale(0);opacity:.9}55%{opacity:.34}100%{transform:translate(-50%,-50%) scale(1);opacity:0}}
+@keyframes rip2{0%{transform:translate(-50%,-50%) scale(0);opacity:.55}100%{transform:translate(-50%,-50%) scale(1);opacity:0}}
+@keyframes glo{0%{transform:translate(-50%,-50%) scale(1.15);opacity:0}14%{transform:translate(-50%,-50%) scale(.52);opacity:.9}46%{transform:translate(-50%,-50%) scale(1.5);opacity:.45}100%{transform:translate(-50%,-50%) scale(3);opacity:0}}
+@keyframes press{from{transform:scale(1) translateZ(0)}to{transform:scale(.951) translateZ(0)}}@keyframes breathe{0%,100%{transform:scale(.951) translateZ(0)}50%{transform:scale(.974) translateZ(0)}}
+@keyframes sanc{0%{opacity:0;transform:scale(1.014);filter:blur(7px)}60%{opacity:1}100%{opacity:1;transform:none;filter:blur(0)}}
+@keyframes twk{0%,100%{opacity:.1}50%{opacity:var(--pk,.8)}}@keyframes waA{0%{transform:translate3d(0,0,0) scale(1);opacity:.5}50%{transform:translate3d(7%,5%,0) scale(1.22);opacity:1}100%{transform:translate3d(-5%,-6%,0) scale(1.05);opacity:.62}}@keyframes waB{0%{transform:translate3d(0,0,0) scale(1.12);opacity:.9}45%{transform:translate3d(-8%,-5%,0) scale(1);opacity:.45}100%{transform:translate3d(6%,-8%,0) scale(1.28);opacity:.85}}@keyframes waC{0%{transform:translate3d(4%,-3%,0) scale(1.06);opacity:.4}55%{transform:translate3d(-6%,6%,0) scale(1.3);opacity:.95}100%{transform:translate3d(3%,2%,0) scale(1.14);opacity:.55}}@media (prefers-reduced-motion:reduce){[data-motion]{animation:none!important}[data-motion="twinkle"]{opacity:.4!important}[data-motion="wash"]{opacity:.72!important}[data-ripple],[data-settle],[data-motion="press"]{animation:none!important}}
+
+</style>
+</helmet>
+<div style="min-height:100vh;background:transparent;font-family:'Inter',system-ui,-apple-system,sans-serif;color:#f3f1ee;display:flex;flex-direction:column;align-items:center;padding:0 20px 28px">
+  <div style="position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden">
+    <div data-motion="wash" style="position:absolute;inset:-24%;background:radial-gradient(46% 40% at 78% 18%,rgba(232,168,196,.529),transparent 66%);mix-blend-mode:screen;will-change:transform,opacity;animation:waA 74s ease-in-out 0s infinite alternate"></div>
+    <div data-motion="wash" style="position:absolute;inset:-24%;background:radial-gradient(52% 38% at 10% 38%,rgba(186,166,220,.483),transparent 68%);mix-blend-mode:screen;will-change:transform,opacity;animation:waB 96s ease-in-out -22s infinite alternate"></div>
+    <div data-motion="wash" style="position:absolute;inset:-24%;background:radial-gradient(44% 34% at 90% 66%,rgba(238,176,182,.414),transparent 68%);mix-blend-mode:screen;will-change:transform,opacity;animation:waC 63s ease-in-out -41s infinite alternate"></div>
+    <div data-motion="wash" style="position:absolute;inset:-24%;background:radial-gradient(60% 34% at 42% 104%,rgba(138,206,214,.506),transparent 66%);mix-blend-mode:screen;will-change:transform,opacity;animation:waB 108s ease-in-out -12s infinite alternate"></div>
+    <div data-motion="wash" style="position:absolute;inset:-24%;background:radial-gradient(40% 30% at 28% 78%,rgba(206,178,222,.391),transparent 70%);mix-blend-mode:screen;will-change:transform,opacity;animation:waC 87s ease-in-out -58s infinite alternate"></div>
+    <div data-motion="wash" style="position:absolute;inset:-24%;background:radial-gradient(38% 26% at 62% 30%,rgba(168,204,232,.368),transparent 72%);mix-blend-mode:screen;will-change:transform,opacity;animation:waA 118s ease-in-out -33s infinite alternate"></div>
+  </div>
+  <div style="position:fixed;inset:0;z-index:-1;pointer-events:none">
+    <span data-motion="twinkle" style="position:absolute;left:22.68%;top:23.95%;width:2.68px;height:2.68px;border-radius:50%;background:#fff;opacity:0;--pk:0.954;animation:twk 6.4s ease-in-out 4.5s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:65.65%;top:59.24%;width:1.87px;height:1.87px;border-radius:50%;background:#fff;opacity:0;--pk:0.828;animation:twk 10.0s ease-in-out 1.8s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:5.20%;top:6.17%;width:1.41px;height:1.41px;border-radius:50%;background:#fff;opacity:0;--pk:0.908;animation:twk 6.7s ease-in-out 5.4s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:55.84%;top:93.16%;width:2.56px;height:2.56px;border-radius:50%;background:#fff;opacity:0;--pk:0.92;animation:twk 9.9s ease-in-out 5.3s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:97.06%;top:72.16%;width:3.18px;height:3.18px;border-radius:50%;background:#fff;opacity:0;--pk:1;animation:twk 5.3s ease-in-out 0.8s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:88.13%;top:10.10%;width:1.86px;height:1.86px;border-radius:50%;background:#fff;opacity:0;--pk:0.851;animation:twk 9.9s ease-in-out 4.7s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:79.10%;top:55.72%;width:1.92px;height:1.92px;border-radius:50%;background:#fff;opacity:0;--pk:0.793;animation:twk 5.9s ease-in-out 8.4s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:90.97%;top:85.68%;width:2.53px;height:2.53px;border-radius:50%;background:#fff;opacity:0;--pk:0.644;animation:twk 6.2s ease-in-out 6.0s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:93.06%;top:0.96%;width:1.89px;height:1.89px;border-radius:50%;background:#fff;opacity:0;--pk:0.793;animation:twk 7.1s ease-in-out 1.3s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:63.13%;top:42.46%;width:2.56px;height:2.56px;border-radius:50%;background:#fff;opacity:0;--pk:0.69;animation:twk 4.5s ease-in-out 5.7s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:7.04%;top:29.02%;width:2.78px;height:2.78px;border-radius:50%;background:#fff;opacity:0;--pk:1;animation:twk 5.8s ease-in-out 3.8s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:20.48%;top:48.66%;width:1.66px;height:1.66px;border-radius:50%;background:#fff;opacity:0;--pk:0.943;animation:twk 8.7s ease-in-out 4.9s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:27.58%;top:60.45%;width:2.30px;height:2.30px;border-radius:50%;background:#fff;opacity:0;--pk:1;animation:twk 6.9s ease-in-out 2.2s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:10.46%;top:46.55%;width:3.01px;height:3.01px;border-radius:50%;background:#fff;opacity:0;--pk:0.667;animation:twk 5.1s ease-in-out 2.5s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:81.74%;top:97.76%;width:2.94px;height:2.94px;border-radius:50%;background:#fff;opacity:0;--pk:1;animation:twk 7.4s ease-in-out 0.4s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:30.11%;top:77.89%;width:2.62px;height:2.62px;border-radius:50%;background:#fff;opacity:0;--pk:1;animation:twk 5.7s ease-in-out 7.8s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:17.58%;top:98.00%;width:2.92px;height:2.92px;border-radius:50%;background:#fff;opacity:0;--pk:0.828;animation:twk 4.6s ease-in-out 0.5s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:8.71%;top:98.49%;width:2.25px;height:2.25px;border-radius:50%;background:#fff;opacity:0;--pk:0.816;animation:twk 5.8s ease-in-out 1.0s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:96.66%;top:89.83%;width:2.05px;height:2.05px;border-radius:50%;background:#fff;opacity:0;--pk:0.885;animation:twk 7.5s ease-in-out 0.8s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:40.86%;top:99.12%;width:3.10px;height:3.10px;border-radius:50%;background:#fff;opacity:0;--pk:0.851;animation:twk 6.4s ease-in-out 2.5s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:76.72%;top:15.09%;width:1.60px;height:1.60px;border-radius:50%;background:#fff;opacity:0;--pk:1;animation:twk 5.4s ease-in-out 0.2s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:81.00%;top:74.96%;width:2.77px;height:2.77px;border-radius:50%;background:#fff;opacity:0;--pk:0.701;animation:twk 5.8s ease-in-out 4.4s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:8.27%;top:99.21%;width:2.82px;height:2.82px;border-radius:50%;background:#fff;opacity:0;--pk:1;animation:twk 10.2s ease-in-out 0.6s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:35.33%;top:10.80%;width:2.21px;height:2.21px;border-radius:50%;background:#fff;opacity:0;--pk:0.678;animation:twk 7.3s ease-in-out 1.5s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:93.29%;top:80.40%;width:2.17px;height:2.17px;border-radius:50%;background:#fff;opacity:0;--pk:1;animation:twk 8.5s ease-in-out 7.9s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:11.94%;top:74.08%;width:2.79px;height:2.79px;border-radius:50%;background:#fff;opacity:0;--pk:0.713;animation:twk 5.2s ease-in-out 5.7s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:79.62%;top:52.21%;width:3.08px;height:3.08px;border-radius:50%;background:#fff;opacity:0;--pk:0.977;animation:twk 8.2s ease-in-out 2.4s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:15.32%;top:33.11%;width:2.97px;height:2.97px;border-radius:50%;background:#fff;opacity:0;--pk:1;animation:twk 8.8s ease-in-out 6.5s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:89.41%;top:99.12%;width:1.88px;height:1.88px;border-radius:50%;background:#fff;opacity:0;--pk:0.874;animation:twk 8.2s ease-in-out 8.2s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:95.89%;top:42.53%;width:2.62px;height:2.62px;border-radius:50%;background:#fff;opacity:0;--pk:0.644;animation:twk 4.7s ease-in-out 0.5s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:5.12%;top:29.94%;width:2.85px;height:2.85px;border-radius:50%;background:#fff;opacity:0;--pk:0.724;animation:twk 6.0s ease-in-out 2.9s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:90.75%;top:63.24%;width:1.85px;height:1.85px;border-radius:50%;background:#fff;opacity:0;--pk:0.828;animation:twk 5.6s ease-in-out 2.4s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:61.45%;top:38.58%;width:2.80px;height:2.80px;border-radius:50%;background:#fff;opacity:0;--pk:1;animation:twk 7.0s ease-in-out 1.3s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:16.45%;top:9.01%;width:1.68px;height:1.68px;border-radius:50%;background:#fff;opacity:0;--pk:1;animation:twk 7.8s ease-in-out 3.3s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:16.64%;top:47.02%;width:2.98px;height:2.98px;border-radius:50%;background:#fff;opacity:0;--pk:0.736;animation:twk 8.7s ease-in-out 3.6s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:99.73%;top:36.92%;width:3.15px;height:3.15px;border-radius:50%;background:#fff;opacity:0;--pk:0.908;animation:twk 4.9s ease-in-out 8.7s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:1.70%;top:10.04%;width:2.14px;height:2.14px;border-radius:50%;background:#fff;opacity:0;--pk:1;animation:twk 6.0s ease-in-out 2.1s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:57.20%;top:23.85%;width:2.37px;height:2.37px;border-radius:50%;background:#fff;opacity:0;--pk:0.931;animation:twk 9.0s ease-in-out 2.5s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:70.77%;top:86.51%;width:2.47px;height:2.47px;border-radius:50%;background:#fff;opacity:0;--pk:0.747;animation:twk 10.3s ease-in-out 3.2s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:59.92%;top:96.18%;width:2.45px;height:2.45px;border-radius:50%;background:#fff;opacity:0;--pk:0.793;animation:twk 5.6s ease-in-out 6.9s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:1.32%;top:6.81%;width:2.96px;height:2.96px;border-radius:50%;background:#fff;opacity:0;--pk:1;animation:twk 6.7s ease-in-out 2.1s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:43.70%;top:4.91%;width:2.81px;height:2.81px;border-radius:50%;background:#fff;opacity:0;--pk:0.92;animation:twk 9.3s ease-in-out 0.7s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:17.39%;top:91.18%;width:1.90px;height:1.90px;border-radius:50%;background:#fff;opacity:0;--pk:0.713;animation:twk 6.3s ease-in-out 5.5s infinite;color:#f3f1ee"></span>
+    <span data-motion="twinkle" style="position:absolute;left:51.20%;top:63.38%;width:2.17px;height:2.17px;border-radius:50%;background:#fff;opacity:0;--pk:1;animation:twk 10.4s ease-in-out 6.3s infinite;color:#f3f1ee"></span>
+  </div>
+  <div style="width:100%;max-width:900px;position:relative;display:flex;justify-content:center;align-items:center;padding:22px 0 12px;border-bottom:1px solid rgba(255,255,255,.14)">
+    <div style="cursor:pointer" onClick="{{ goHome }}">
+      <span style="font-family:'Quicksand',system-ui,sans-serif;font-weight:500;font-size:27px;letter-spacing:.015em;color:#f3f1ee">Stillhaven</span>
+    </div>
+    <div style="position:absolute;right:0;top:18px;display:flex;gap:8px;align-items:center">
+      <button onClick="{{ toggleDemo }}" style="{{ demoPillStyle }}">{{ demoPillLabel }}</button>
+    </div>
+  </div>
+  <div style="width:100%;max-width:900px;padding:11px 0 0;font-size:11px;color:#dde3ea;letter-spacing:.07em;text-transform:uppercase;line-height:1.4;text-align:center">An emotional sanctuary for crisis, overwhelm, and conflict</div>
+
+  <sc-if value="{{ rippling }}" hint-placeholder-val="{{ false }}">
+    <div data-ripple="true" style="{{ rippleOrigin }}">
+      <div style="position:absolute;width:230vmax;height:230vmax;border-radius:50%;border:1.5px solid rgba(226,240,246,.5);animation:rip 1150ms cubic-bezier(.22,.68,.28,1) forwards"></div>
+      <div style="position:absolute;width:230vmax;height:230vmax;border-radius:50%;border:1px solid rgba(190,222,232,.34);animation:rip2 1500ms 150ms cubic-bezier(.22,.68,.28,1) forwards"></div>
+      <div style="position:absolute;width:66vmax;height:66vmax;border-radius:50%;background:radial-gradient(circle,rgba(214,238,244,.13),rgba(150,196,206,.04) 46%,transparent 70%);animation:glo 1000ms cubic-bezier(.3,.6,.3,1) forwards"></div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+    <div style="width:100%;max-width:900px;flex:1;display:flex;flex-direction:column;align-items:center;gap:15px;padding-top:56px;text-align:center">
+      <div style="font-family:'Quicksand',system-ui,sans-serif;font-size:38px;font-weight:500;line-height:1.05;letter-spacing:-.01em;max-width:22ch;text-wrap:pretty;color:#f3f1ee;text-align:center">{{ homeHeadline }}</div>
+      <div style="font-size:15px;color:#dde3ea;line-height:1.55;max-width:38ch;text-wrap:pretty;text-align:center;font-family:'Literata',Georgia,serif">{{ homeSub }}</div>
+      <sc-if value="{{ cooldownActive }}" hint-placeholder-val="{{ false }}">
+        <button onClick="{{ goCooldown }}" style="margin-top:10px;display:flex;justify-content:center;gap:12px;align-items:center;background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.14);border-radius:11px;padding:13px 18px;cursor:pointer;font-size:14px;color:#f3f1ee;font-family:inherit">
+          <span>A cooldown is running</span><span style="font-family:'Quicksand',system-ui,sans-serif;font-weight:500;font-size:19px;letter-spacing:-.005em">{{ cooldownClock }}</span>
+        </button>
+      </sc-if>
+      <div style="margin-top:22px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:#d3c0ec;text-align:center">Choose what fits right now</div>
+      <div style="display:grid;grid-template-columns:1fr;gap:14px;width:100%;max-width:600px">
+        <button data-motion="press" onClick="{{ goRed }}" onPointerDown="{{ redPress }}" onPointerUp="{{ redRelease }}" onPointerLeave="{{ redRelease }}" onPointerCancel="{{ redRelease }}" style="position:relative;box-shadow:0 24px 54px rgba(6,10,28,.44),0 0 46px rgba(226,142,118,.26),inset 0 1px 0 rgba(255,226,214,.34);will-change:transform;transform:translateZ(0);background:linear-gradient(146deg,rgba(232,146,120,.34),rgba(206,116,126,.24) 52%,rgba(176,110,140,.22));backdrop-filter:blur(26px) saturate(1.4);-webkit-backdrop-filter:blur(26px) saturate(1.4);border:1px solid rgba(250,196,178,.42);border-radius:38px;padding:34px 34px 36px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:10px;color:#fdf6f3;font:inherit;text-align:center" style-hover="box-shadow:0 28px 62px rgba(6,10,28,.5),0 0 60px rgba(226,142,118,.36),inset 0 1px 0 rgba(255,226,214,.44);border-color:rgba(252,208,192,.55)">
+          <span style="font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;font-weight:600;color:#f9cec0">Emotional overwhelm</span>
+          <span style="font-family:'Quicksand',system-ui,sans-serif;font-size:27px;font-weight:500;line-height:1.06;letter-spacing:-.008em">Pause and Restore</span>
+          <span style="width:52px;height:1px;background:rgba(250,206,190,.4);margin:3px 0 1px"></span>
+          <span style="font-size:13px;color:#f0dcd6;line-height:1.55;max-width:46ch;text-wrap:pretty;font-family:'Literata',Georgia,serif">Sanctuary Mode gives your body what it needs while the crisis passes. It will not replace what you want, but it can keep the pain from deciding what happens next.</span>
+        </button>
+      </div>
+      <sc-if value="{{ utilCards }}" hint-placeholder-val="{{ true }}">
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:100%;max-width:600px;margin-top:12px">
+          <button onClick="{{ goPre }}" style="position:relative;background:linear-gradient(180deg,rgba(24,36,62,.62),rgba(18,28,50,.5));backdrop-filter:blur(20px) saturate(1.25);-webkit-backdrop-filter:blur(20px) saturate(1.25);border:1px solid rgba(126,186,190,.34);box-shadow:0 12px 26px rgba(6,10,28,.32),inset 0 1px 0 rgba(255,255,255,.1);border-radius:18px;padding:15px 14px;min-height:84px;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;text-align:center;color:#f3f1ee;transition:border-color 180ms ease,box-shadow 180ms ease,background 180ms ease" style-hover="border-color:rgba(126,186,190,.5);box-shadow:0 16px 32px rgba(6,10,28,.4),0 0 22px rgba(126,186,190,.5),inset 0 1px 0 rgba(255,255,255,.14);background:linear-gradient(180deg,rgba(30,44,74,.7),rgba(22,34,58,.56))">
+            <span style="font-size:13.5px;font-weight:600;line-height:1.2;letter-spacing:-.003em;text-wrap:pretty">Pause before responding</span>
+            <span style="width:26px;height:1px;background:rgba(143,201,204,.45);margin:2px 0 1px"></span>
+            <span style="font-size:11px;color:#c2cddb;line-height:1.35;text-wrap:pretty">Conflict with someone</span>
+          </button>
+          <button onClick="{{ goSetup }}" style="position:relative;background:linear-gradient(180deg,rgba(24,36,62,.62),rgba(18,28,50,.5));backdrop-filter:blur(20px) saturate(1.25);-webkit-backdrop-filter:blur(20px) saturate(1.25);border:1px solid rgba(150,150,214,.34);box-shadow:0 12px 26px rgba(6,10,28,.32),inset 0 1px 0 rgba(255,255,255,.1);border-radius:18px;padding:15px 14px;min-height:84px;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;text-align:center;color:#f3f1ee;transition:border-color 180ms ease,box-shadow 180ms ease,background 180ms ease" style-hover="border-color:rgba(150,150,214,.5);box-shadow:0 16px 32px rgba(6,10,28,.4),0 0 22px rgba(150,150,214,.5),inset 0 1px 0 rgba(255,255,255,.14);background:linear-gradient(180deg,rgba(30,44,74,.7),rgba(22,34,58,.56))">
+            <span style="font-size:13.5px;font-weight:600;line-height:1.2;letter-spacing:-.003em;text-wrap:pretty">Set up</span>
+            <span style="width:26px;height:1px;background:rgba(169,164,230,.45);margin:2px 0 1px"></span>
+            <span style="font-size:11px;color:#c2cddb;line-height:1.35;text-wrap:pretty">Plan, supports, guardrails</span>
+          </button>
+          <button onClick="{{ goResources }}" style="position:relative;background:linear-gradient(180deg,rgba(24,36,62,.62),rgba(18,28,50,.5));backdrop-filter:blur(20px) saturate(1.25);-webkit-backdrop-filter:blur(20px) saturate(1.25);border:1px solid rgba(222,170,132,.34);box-shadow:0 12px 26px rgba(6,10,28,.32),inset 0 1px 0 rgba(255,255,255,.1);border-radius:18px;padding:15px 14px;min-height:84px;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;text-align:center;color:#f3f1ee;transition:border-color 180ms ease,box-shadow 180ms ease,background 180ms ease" style-hover="border-color:rgba(222,170,132,.5);box-shadow:0 16px 32px rgba(6,10,28,.4),0 0 22px rgba(222,170,132,.5),inset 0 1px 0 rgba(255,255,255,.14);background:linear-gradient(180deg,rgba(30,44,74,.7),rgba(22,34,58,.56))">
+            <span style="font-size:13.5px;font-weight:600;line-height:1.2;letter-spacing:-.003em;text-wrap:pretty">Resources</span>
+            <span style="width:26px;height:1px;background:rgba(232,180,137,.45);margin:2px 0 1px"></span>
+            <span style="font-size:11px;color:#c2cddb;line-height:1.35;text-wrap:pretty">Lines you can reach now</span>
+          </button>
+        </div>
+      </sc-if>
+      <sc-if value="{{ utilLinks }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:14px">
+          <button onClick="{{ goPre }}" style="background:transparent;border:none;cursor:pointer;display:flex;align-items:center;gap:7px;padding:10px 4px;font-size:13px;color:#dde3ea;min-height:44px;transition:color 160ms ease" style-hover="color:#fff">
+            <span style="width:5px;height:5px;border-radius:50%;background:#8fc9cc;box-shadow:0 0 8px #8fc9cc"></span>Pause before responding
+          </button>
+        <span style="width:1px;height:14px;background:rgba(255,255,255,.16)"></span>
+          <button onClick="{{ goSetup }}" style="background:transparent;border:none;cursor:pointer;display:flex;align-items:center;gap:7px;padding:10px 4px;font-size:13px;color:#dde3ea;min-height:44px;transition:color 160ms ease" style-hover="color:#fff">
+            <span style="width:5px;height:5px;border-radius:50%;background:#a9a4e6;box-shadow:0 0 8px #a9a4e6"></span>Set up
+          </button>
+        <span style="width:1px;height:14px;background:rgba(255,255,255,.16)"></span>
+          <button onClick="{{ goResources }}" style="background:transparent;border:none;cursor:pointer;display:flex;align-items:center;gap:7px;padding:10px 4px;font-size:13px;color:#dde3ea;min-height:44px;transition:color 160ms ease" style-hover="color:#fff">
+            <span style="width:5px;height:5px;border-radius:50%;background:#e8b489;box-shadow:0 0 8px #e8b489"></span>Resources
+          </button>
+        </div>
+      </sc-if>
+      <sc-if value="{{ utilList }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;flex-direction:column;width:100%;max-width:340px;margin-top:14px">
+          <button onClick="{{ goPre }}" style="background:transparent;border:none;border-top:1px solid rgba(255,255,255,.1);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:9px;padding:14px 8px;min-height:52px;color:#f3f1ee;transition:background 160ms ease" style-hover="background:rgba(255,255,255,.05)">
+            <span style="width:5px;height:5px;border-radius:50%;background:#8fc9cc;box-shadow:0 0 8px #8fc9cc"></span>
+            <span style="font-size:13.5px;font-weight:600">Pause before responding</span>
+            <span style="font-size:11.5px;color:#c2cddb">Conflict with someone</span>
+          </button>
+          <button onClick="{{ goSetup }}" style="background:transparent;border:none;border-top:1px solid rgba(255,255,255,.1);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:9px;padding:14px 8px;min-height:52px;color:#f3f1ee;transition:background 160ms ease" style-hover="background:rgba(255,255,255,.05)">
+            <span style="width:5px;height:5px;border-radius:50%;background:#a9a4e6;box-shadow:0 0 8px #a9a4e6"></span>
+            <span style="font-size:13.5px;font-weight:600">Set up</span>
+            <span style="font-size:11.5px;color:#c2cddb">Plan, supports, guardrails</span>
+          </button>
+          <button onClick="{{ goResources }}" style="background:transparent;border:none;border-top:1px solid rgba(255,255,255,.1);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:9px;padding:14px 8px;min-height:52px;color:#f3f1ee;transition:background 160ms ease" style-hover="background:rgba(255,255,255,.05)">
+            <span style="width:5px;height:5px;border-radius:50%;background:#e8b489;box-shadow:0 0 8px #e8b489"></span>
+            <span style="font-size:13.5px;font-weight:600">Resources</span>
+            <span style="font-size:11.5px;color:#c2cddb">Lines you can reach now</span>
+          </button>
+        </div>
+      </sc-if>
+      <div style="margin-top:auto;padding-top:52px;font-size:10.5px;color:#9aa7b4;line-height:1.5;max-width:52ch;text-wrap:pretty;text-align:center;align-self:center">This app is not therapy, diagnosis, or emergency care. If you are in immediate danger or can't stay safe, call or text 988 (US) or your local emergency number.</div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isResources }}" hint-placeholder-val="{{ false }}">
+    <div style="width:100%;max-width:620px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;padding-top:28px">
+      <a onClick="{{ resBack }}" style="font-size:13px;cursor:pointer;color:#f3f1ee">{{ resBackLabel }}</a>
+      <div style="font-family:'Quicksand',system-ui,sans-serif;font-size:25px;font-weight:500;line-height:1.12;letter-spacing:-.005em;text-wrap:pretty;color:#f3f1ee">Someone is there, whatever this is.</div>
+      <div style="font-size:14px;color:#dde3ea;line-height:1.6;max-width:56ch;text-wrap:pretty;font-family:'Literata',Georgia,serif">You do not have to be in danger to use any of these. Save your warmline while you're calm — that's the number hardest to find later.</div>
+      <div style="width:100%;display:flex;flex-direction:column;gap:10px">
+              <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#dde3ea">I need to talk to someone</div>
+              <div style="background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:5px;color:#f3f1ee">
+                <div style="font-size:14.5px;font-weight:600">A warmline</div>
+                <div style="font-size:13px;color:#dde3ea;line-height:1.5;text-wrap:pretty">Peer listening for distress, loneliness, or wanting to talk about anything — not an emergency line. Hours and coverage vary by area, so save yours while calm.</div>
+                <input value="{{ cfgWarmline }}" onChange="{{ setWarmline }}" placeholder="My local warmline — name and number" style="margin-top:6px;background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:9px 11px;font-size:14px;color:#f3f1ee;outline:none;font-family:'Literata',Georgia,serif">
+              </div>
+              <div style="background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:5px;color:#f3f1ee">
+                <div style="font-size:14.5px;font-weight:600">988 — emotional support, any reason (US)</div>
+                <div style="font-size:13px;color:#dde3ea;line-height:1.5;text-wrap:pretty">Call, text, or chat, any hour. It is not "suicide only" — it covers emotional distress, relationship trouble, loneliness, substance concerns, or just needing someone to talk to.</div>
+              </div>
+              <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#dde3ea;margin-top:8px">I'm unsafe because of another person</div>
+              <div style="font-size:13px;color:#dde3ea;line-height:1.5;margin-top:-4px;text-wrap:pretty">These services offer confidential support, safety planning, information, and local referrals when harm is coming from another person. If anyone is in immediate physical danger or needs urgent medical help, use emergency services.</div>
+              <div style="background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:5px;color:#f3f1ee">
+                <div style="font-size:14.5px;font-weight:600">RAINN — National Sexual Assault Hotline</div>
+                <div style="font-size:13px;color:#dde3ea;line-height:1.5;text-wrap:pretty">Free, confidential, 24/7 support for anyone affected by sexual violence, in English and en Español. Call 800.656.HOPE (4673), chat at rainn.org/hotline, or text HOPE to 64673.</div>
+              </div>
+              <div style="background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:5px;color:#f3f1ee">
+                <div style="font-size:14.5px;font-weight:600">National Domestic Violence Hotline</div>
+                <div style="font-size:13px;color:#dde3ea;line-height:1.5;text-wrap:pretty">Live advocates, 24/7 — including for coercion, threats, and escalating conflict you're not sure how to name. Call 800.799.SAFE (7233), text START to 88788, or chat online.</div>
+                <div style="font-size:12.5px;color:#dde3ea;line-height:1.5;background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border-radius:7px;padding:9px 11px;margin-top:3px;text-wrap:pretty">Caution if you visit online: The Hotline warns that internet activity can be monitored and may not be completely erasable. If someone may have access to your device, calling or texting is safer.</div>
+              </div>
+              <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#dde3ea;margin-top:8px">I need practical help</div>
+              <div style="background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:5px;color:#f3f1ee">
+                <div style="font-size:14.5px;font-weight:600">United Way</div>
+                <div style="font-size:13px;color:#dde3ea;line-height:1.5;text-wrap:pretty">Call or text 211 and they'll guide you toward local resources and support — food, housing, transportation, utility help, health services, and more. In the US, local 211 services advertise 24/7 access and support in up to 180 languages. In Canada, 211 is available in most of the country, 24 hours a day, in more than 150 languages.</div>
+              </div>
+              <div style="background:#1b2c42;color:#f3f1ee;border-radius:10px;padding:14px 16px;display:flex;flex-direction:column;gap:5px;margin-top:8px">
+                <div style="font-size:14.5px;font-weight:700">911 — immediate physical danger</div>
+                <div style="font-size:13px;color:#dde3ea;line-height:1.5;text-wrap:pretty">Use emergency services if you or someone else is in immediate danger, a medical emergency has occurred, or urgent in-person help is needed. A different function from wanting grounding and human contact — it sits outside your support list on purpose.</div>
+              </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isSetup }}" hint-placeholder-val="{{ false }}">
+    <div style="width:100%;max-width:620px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;padding-top:28px">
+      <div style="width:100%;display:flex;justify-content:space-between;align-items:center">
+        <a onClick="{{ setupBack }}" style="font-size:13px;cursor:pointer;color:#f3f1ee">{{ setupBackLabel }}</a>
+        <div style="display:flex;gap:6px">
+          <sc-for list="{{ setupDots }}" as="dot" hint-placeholder-count="4">
+            <div style="{{ dot.style }}"></div>
+          </sc-for>
+        </div>
+      </div>
+      <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#d3c0ec;font-weight:600">{{ setupTag }}</div>
+      <div style="font-family:'Quicksand',system-ui,sans-serif;font-size:25px;font-weight:500;line-height:1.12;text-wrap:pretty;letter-spacing:-.005em;color:#f3f1ee">{{ setupQuestion }}</div>
+      <div style="font-size:13.5px;color:#dde3ea;line-height:1.55;max-width:56ch;text-wrap:pretty">{{ setupHint }}</div>
+
+      <sc-if value="{{ setupIsSupport }}" hint-placeholder-val="{{ true }}">
+        <div style="width:100%;display:flex;flex-direction:column;gap:10px">
+          <sc-for list="{{ supportOpts }}" as="o" hint-placeholder-count="5">
+            <div style="{{ o.wrapStyle }}">
+              <button onClick="{{ o.toggle }}" style="display:flex;gap:13px;align-items:flex-start;justify-content:center;background:transparent;border:none;padding:0;cursor:pointer;text-align:left;width:100%;color:inherit;font:inherit">
+                <span style="{{ o.checkStyle }}">{{ o.check }}</span>
+                <span style="display:flex;flex-direction:column;gap:4px">
+                  <span style="font-size:15px;font-weight:600;line-height:1.3">{{ o.title }}</span>
+                  <span style="font-size:13px;color:inherit;opacity:.92;line-height:1.5;font-style:italic;text-wrap:pretty">{{ o.blurb }}</span>
+                </span>
+              </button>
+              <sc-if value="{{ o.showInput }}" hint-placeholder-val="{{ false }}">
+                <div style="margin-top:11px;display:flex;flex-direction:column;gap:8px">
+                  <sc-for list="{{ o.entries }}" as="e" hint-placeholder-count="1">
+                    <div style="position:absolute;right:0;top:18px;display:flex;gap:8px;align-items:center">
+                      <input value="{{ e.value }}" onChange="{{ e.setValue }}" placeholder="{{ e.placeholder }}" style="flex:1;min-width:0;background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:10px 12px;font-size:14.5px;color:#f3f1ee;outline:none;font-family:'Literata',Georgia,serif">
+                      <sc-if value="{{ e.showRemove }}" hint-placeholder-val="{{ false }}">
+                        <button onClick="{{ e.remove }}" style="flex:none;background:transparent;border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:9px 12px;font-size:12.5px;color:inherit;cursor:pointer">Remove</button>
+                      </sc-if>
+                    </div>
+                  </sc-for>
+                  <sc-if value="{{ o.canAdd }}" hint-placeholder-val="{{ true }}">
+                    <button onClick="{{ o.add }}" style="align-self:flex-start;background:transparent;border:1px dashed rgba(255,255,255,.2);border-radius:8px;padding:9px 14px;font-size:13px;color:inherit;font-weight:600;cursor:pointer">{{ o.addLabel }}</button>
+                  </sc-if>
+                </div>
+              </sc-if>
+            </div>
+          </sc-for>
+        </div>
+
+        <sc-if value="{{ showConsent }}" hint-placeholder-val="{{ false }}">
+          <div style="background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border:1px solid rgba(255,255,255,.14);border-radius:11px;padding:18px 20px;display:flex;flex-direction:column;gap:11px;color:#f3f1ee">
+            <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#d3c0ec">Optional — ask them while calm</div>
+            <div style="font-size:13.5px;color:#dde3ea;line-height:1.5;text-wrap:pretty">Listing someone isn't the same as them agreeing. Sending this now means neither of you is improvising later.</div>
+            <div style="font-family:'Literata',Georgia,serif;font-size:15.5px;line-height:1.6;background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border-radius:9px;padding:15px 17px;text-wrap:pretty;color:#f3f1ee">{{ consentScript }}</div>
+            <button onClick="{{ copyConsent }}" style="align-self:flex-start;background:#a786d5;color:#22103a;border:none;border-radius:9px;padding:10px 18px;font-size:13.5px;font-weight:600;cursor:pointer">{{ copyLabel }}</button>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ showLadder }}" hint-placeholder-val="{{ false }}">
+          <div style="background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:14px;color:#f3f1ee">
+            <div style="font-family:'Quicksand',system-ui,sans-serif;font-size:19px;font-weight:500;letter-spacing:-.005em">Your Stillhaven ladder</div>
+            <div style="font-size:13.5px;color:#dde3ea;line-height:1.55;text-wrap:pretty">A plan that doesn't depend on one person picking up. Start at the top; move down only as far as you need.</div>
+            <div style="width:100%;display:flex;flex-direction:column;gap:2px">
+              <sc-for list="{{ ladder }}" as="l" hint-placeholder-count="5">
+                <div style="display:flex;gap:13px;align-items:flex-start;justify-content:center;padding:13px 0;border-top:1px solid rgba(255,255,255,.14)">
+                  <span style="flex:none;width:24px;height:24px;border-radius:50%;background:rgba(123,138,163,.34);color:#dde3ea;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center">{{ l.n }}</span>
+                  <span style="display:flex;flex-direction:column;gap:3px">
+                    <span style="font-size:14.5px;font-weight:600">{{ l.title }}</span>
+                    <span style="font-size:13px;color:#dde3ea;line-height:1.5;text-wrap:pretty">{{ l.body }}</span>
+                  </span>
+                </div>
+              </sc-for>
+            </div>
+            <div style="border-top:1px solid rgba(255,255,255,.14);padding-top:16px;display:flex;flex-direction:column;gap:11px">
+              <div style="font-size:14.5px;line-height:1.55;text-wrap:pretty;font-family:'Literata',Georgia,serif">Write one healthy action that can help you feel more connected, grounded, or settled. You can also generate an option until one fits.</div>
+              <input value="{{ cfgLadderPlace }}" onChange="{{ setLadderPlace }}" placeholder="e.g. Open the curtains and sit by the window" style="width:100%;box-sizing:border-box;background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:11px 13px;font-size:14.5px;color:#f3f1ee;outline:none;font-family:'Literata',Georgia,serif">
+              <sc-if value="{{ hasGen }}" hint-placeholder-val="{{ false }}">
+                <div style="background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border-radius:9px;padding:14px 16px;display:flex;flex-direction:column;gap:5px;color:#f3f1ee">
+                  <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#d3c0ec">{{ genCat }}</div>
+                  <div style="font-family:'Quicksand',system-ui,sans-serif;font-size:17px;line-height:1.4;letter-spacing:-.005em">{{ genText }}</div>
+                </div>
+              </sc-if>
+              <div style="display:flex;gap:9px;flex-wrap:wrap">
+                <button onClick="{{ rollAction }}" style="background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.14);border-radius:9px;padding:11px 18px;font-size:13.5px;font-weight:600;color:#f3f1ee;cursor:pointer">{{ rollLabel }}</button>
+                <sc-if value="{{ hasGen }}" hint-placeholder-val="{{ false }}">
+                  <button onClick="{{ useGen }}" style="background:#a786d5;color:#22103a;border:none;border-radius:9px;padding:11px 18px;font-size:13.5px;font-weight:600;cursor:pointer">Use this one</button>
+                </sc-if>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:7px;padding-top:4px">
+                <sc-for list="{{ actionCats }}" as="a" hint-placeholder-count="7">
+                  <div style="font-size:12.5px;line-height:1.5;color:#dde3ea"><strong style="color:#dde3ea">{{ a.cat }}:</strong> {{ a.list }}</div>
+                </sc-for>
+              </div>
+            </div>
+          </div>
+        </sc-if>
+
+        <button onClick="{{ goResources }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:14px;background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.14);border-radius:11px;padding:15px 17px;cursor:pointer;text-align:left;color:#f3f1ee">
+          <span style="display:flex;flex-direction:column;gap:3px">
+            <span style="font-size:15px;font-weight:600">Crisis and emergency responses</span>
+            <span style="font-size:13px;color:#dde3ea;line-height:1.45">{{ crisisCardSub }}</span>
+          </span>
+          <span style="flex:none;font-size:15px;color:#d3c0ec">→</span>
+        </button>
+      </sc-if>
+
+      <sc-if value="{{ setupIsCooldown }}" hint-placeholder-val="{{ false }}">
+        <div style="width:100%;display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;gap:9px;flex-wrap:wrap">
+            <sc-for list="{{ durOpts }}" as="d" hint-placeholder-count="4">
+              <button onClick="{{ d.pick }}" style="{{ d.style }}">{{ d.label }}</button>
+            </sc-for>
+          </div>
+          <div style="background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:16px 18px;display:flex;flex-direction:column;gap:11px;color:#f3f1ee">
+            <div style="font-size:14.5px;font-weight:600">Does a precise return time help you, or make it worse?</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <sc-for list="{{ returnOpts }}" as="r" hint-placeholder-count="2">
+                <button onClick="{{ r.pick }}" style="{{ r.style }}">{{ r.label }}</button>
+              </sc-for>
+            </div>
+            <div style="font-size:12.5px;color:#dde3ea;line-height:1.5;text-wrap:pretty">{{ returnNote }}</div>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ setupIsDoNot }}" hint-placeholder-val="{{ false }}">
+        <div style="width:100%;display:flex;flex-direction:column;gap:16px">
+          <div style="font-size:14px;color:#dde3ea;line-height:1.6;text-wrap:pretty;font-family:'Literata',Georgia,serif">Some of these actions may be completely reasonable when you are calm. During a crisis, however, panic, anger, or urgency may push you to use them in ways that create consequences you do not actually want.</div>
+          <div style="font-size:14px;color:#dde3ea;line-height:1.6;text-wrap:pretty;font-family:'Literata',Georgia,serif">Choose which actions Pause and Restore should help you pause, and decide ahead of time what you would rather do instead. <strong style="color:#f3f1ee">Pause does not mean never.</strong> It means not while the crisis is making the decision.</div>
+          <div style="display:flex;flex-direction:column;gap:2px;margin-top:2px">
+            <div style="font-family:'Quicksand',system-ui,sans-serif;font-size:19px;font-weight:500;letter-spacing:-.005em;color:#f3f1ee">Common patterns</div>
+            <div style="font-size:13.5px;color:#dde3ea;line-height:1.5">Browse suggestions that may fit.</div>
+          </div>
+          <div style="width:100%;display:flex;flex-direction:column;gap:9px">
+            <sc-for list="{{ guardCats }}" as="c" hint-placeholder-count="6">
+              <div style="{{ c.wrapStyle }}">
+                <button onClick="{{ c.toggleOpen }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;background:transparent;border:none;padding:14px 16px;cursor:pointer;text-align:left;color:#f3f1ee;font:inherit">
+                  <span style="display:flex;flex-direction:column;gap:3px">
+                    <span style="font-size:14.5px;font-weight:600;line-height:1.35">{{ c.title }}</span>
+                    <span style="font-size:12px;color:#d3c0ec;font-weight:600">{{ c.countLabel }}</span>
+                  </span>
+                  <span style="{{ c.chevStyle }}">▾</span>
+                </button>
+                <sc-if value="{{ c.open }}" hint-placeholder-val="{{ false }}">
+                  <div style="padding:0 16px 16px;display:flex;flex-direction:column;gap:11px">
+                    <div style="font-size:13.5px;color:#dde3ea;line-height:1.55;font-style:italic;text-wrap:pretty">{{ c.why }}</div>
+                    <sc-if value="{{ c.hasNote }}" hint-placeholder-val="{{ false }}">
+                      <div style="font-size:12.5px;color:#dde3ea;line-height:1.5;background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border-radius:7px;padding:9px 11px;text-wrap:pretty">{{ c.note }}</div>
+                    </sc-if>
+                    <div style="display:flex;flex-wrap:wrap;gap:8px">
+                      <sc-for list="{{ c.items }}" as="it" hint-placeholder-count="6">
+                        <button onClick="{{ it.toggle }}" style="{{ it.style }}">{{ it.label }}</button>
+                      </sc-for>
+                    </div>
+                  </div>
+                </sc-if>
+              </div>
+            </sc-for>
+          </div>
+
+          <div style="margin-top:14px;background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:20px 22px;display:flex;flex-direction:column;gap:12px;color:#f3f1ee">
+            <div style="width:100%;display:flex;flex-direction:column;gap:3px">
+              <div style="font-family:'Quicksand',system-ui,sans-serif;font-size:19px;font-weight:500;letter-spacing:-.005em">Add something from your own history</div>
+              <div style="font-size:13.5px;color:#dde3ea;line-height:1.55;text-wrap:pretty">The suggestions above are only a starting point. For this plan to work well, add at least one specific urge or action you know you may struggle with when overwhelmed.</div>
+            </div>
+            <div style="border:1px solid rgba(255,255,255,.14);border-radius:10px;overflow:hidden;background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);color:#f3f1ee">
+              <button onClick="{{ toggleGuardHelp }}" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:12px;background:transparent;border:none;padding:12px 15px;cursor:pointer;text-align:left;color:#f3f1ee;font:inherit">
+                <span style="font-size:13.5px;font-weight:600;line-height:1.4">Not sure what to write? Open for guidance</span>
+                <span style="{{ guardHelpChevStyle }}">▾</span>
+              </button>
+              <sc-if value="{{ guardHelpOpen }}" hint-placeholder-val="{{ false }}">
+                <div style="padding:0 15px 15px;display:flex;flex-direction:column;gap:10px">
+                  <div style="font-size:14px;color:#dde3ea;line-height:1.6;text-wrap:pretty;font-family:'Literata',Georgia,serif">The suggestions above can't cover every way you respond when overwhelmed. Take a moment to think honestly about actions you've taken that were risky, hard to undo, or caused more pain afterward.</div>
+                  <div style="font-size:14px;color:#dde3ea;line-height:1.6;text-wrap:pretty;font-family:'Literata',Georgia,serif">This is not about judging yourself. Naming a pattern gives you the chance to interrupt it. Be specific about the action rather than labelling yourself.</div>
+                  <div style="display:flex;flex-direction:column;gap:5px;font-size:13.5px;color:#dde3ea;line-height:1.5">
+                    <div>Instead of “I become toxic,” write “I send messages designed to hurt them.”</div>
+                    <div>Instead of “I lose control,” write “I drive too fast when I'm angry.”</div>
+                    <div>Instead of “I ruin relationships,” write “I threaten to leave when I actually want reassurance.”</div>
+                  </div>
+                </div>
+              </sc-if>
+            </div>
+            <div style="display:flex;gap:9px;flex-wrap:wrap;align-items:center">
+              <input value="{{ customUrge }}" onChange="{{ setCustomUrge }}" placeholder="When I’m overwhelmed, I may feel driven to…" style="flex:1;min-width:240px;background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:11px 13px;font-size:14.5px;color:#f3f1ee;outline:none;font-family:'Literata',Georgia,serif">
+              <button onClick="{{ addCustomUrge }}" style="flex:none;background:#a786d5;color:#22103a;border:none;border-radius:8px;padding:11px 17px;font-size:13.5px;font-weight:600;cursor:pointer">Add to my plan</button>
+            </div>
+            <div style="font-size:13px;color:#dde3ea;line-height:1.5;font-style:italic;text-wrap:pretty">Honesty here protects you later. The app can only interrupt the patterns you're willing to name.</div>
+          </div>
+
+          <sc-if value="{{ hasPairs }}" hint-placeholder-val="{{ true }}">
+            <div style="display:flex;flex-direction:column;gap:11px;border-top:1px solid rgba(255,255,255,.14);padding-top:18px">
+              <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#dde3ea">Where the energy goes instead — {{ pairCount }}</div>
+              <sc-for list="{{ pairs }}" as="p" hint-placeholder-count="3">
+                <div style="background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border:1px solid rgba(255,255,255,.14);border-radius:11px;padding:15px 17px;display:flex;flex-direction:column;gap:9px;color:#f3f1ee">
+                  <div style="width:100%;display:flex;justify-content:space-between;align-items:flex-start;gap:12px">
+                    <span style="display:flex;flex-direction:column;gap:2px">
+                      <span style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;color:#dde3ea">When I want to</span>
+                      <span style="font-family:'Quicksand',system-ui,sans-serif;font-size:17px;line-height:1.2;letter-spacing:-.005em">{{ p.urge }}</span>
+                    </span>
+                    <button onClick="{{ p.remove }}" style="flex:none;background:transparent;border:1px solid rgba(255,255,255,.14);border-radius:7px;padding:6px 10px;font-size:12px;color:#dde3ea;cursor:pointer">Remove</button>
+                  </div>
+                  <div style="display:flex;flex-direction:column;gap:5px">
+                    <span style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;color:#d3c0ec">I will instead</span>
+                    <textarea value="{{ p.repl }}" onChange="{{ p.setRepl }}" rows="2" placeholder="{{ p.placeholder }}" style="width:100%;box-sizing:border-box;background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:10px 12px;font-size:14.5px;line-height:1.5;color:#f3f1ee;outline:none;resize:vertical;font-family:'Literata',Georgia,serif"></textarea>
+                  </div>
+                </div>
+              </sc-for>
+              <sc-if value="{{ needsRepl }}" hint-placeholder-val="{{ false }}">
+                <div style="font-size:13px;color:#d3c0ec;font-weight:600;line-height:1.5;text-wrap:pretty">One of these has no replacement yet. Decide now where the energy goes instead — that's the part flooded-you will actually use.</div>
+              </sc-if>
+              <div style="font-size:12.5px;color:#dde3ea;line-height:1.5;text-wrap:pretty">Suggested wording is pre-filled — edit any of it. Pause and Restore shows only what you picked here, nothing else from the list.</div>
+            </div>
+          </sc-if>
+
+          <sc-if value="{{ showExtra }}" hint-placeholder-val="{{ false }}">
+            <div style="{{ extraWrapStyle }}">
+              <div style="font-family:'Quicksand',system-ui,sans-serif;font-size:19px;font-weight:500;line-height:1.14;text-wrap:pretty;letter-spacing:-.005em">{{ extraTitle }}</div>
+              <div style="{{ extraBodyStyle }}">{{ extraBody }}</div>
+              <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <sc-for list="{{ extraOpts }}" as="x" hint-placeholder-count="10">
+                  <button onClick="{{ x.toggle }}" style="{{ x.style }}">{{ x.label }}</button>
+                </sc-for>
+              </div>
+              <div style="display:flex;gap:9px;flex-wrap:wrap;align-items:center">
+                <input value="{{ extraCustom }}" onChange="{{ setExtraCustom }}" placeholder="Add my own step" style="flex:1;min-width:220px;background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:11px 13px;font-size:14.5px;color:#f3f1ee;outline:none;font-family:'Literata',Georgia,serif">
+                <button onClick="{{ addExtraCustom }}" style="flex:none;background:#a786d5;color:#22103a;border:none;border-radius:8px;padding:11px 17px;font-size:13.5px;font-weight:600;cursor:pointer">Add to my plan</button>
+              </div>
+              <div style="{{ extraHintStyle }}">{{ extraHint }}</div>
+            </div>
+          </sc-if>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ setupIsSignoff }}" hint-placeholder-val="{{ false }}">
+        <div style="width:100%;display:flex;flex-direction:column;gap:14px">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <sc-for list="{{ signoffSuggestions }}" as="sg" hint-placeholder-count="3">
+              <button onClick="{{ sg.pick }}" style="{{ sg.style }}">{{ sg.label }}</button>
+            </sc-for>
+          </div>
+          <textarea value="{{ cfgSignoff }}" onChange="{{ setSignoff }}" rows="3" placeholder="Write it in your own words" style="background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:12px 14px;font-size:15.5px;line-height:1.6;color:#f3f1ee;outline:none;resize:vertical;font-family:'Literata',Georgia,serif"></textarea>
+          <div style="font-size:12.5px;color:#dde3ea;line-height:1.5">This is the first thing you'll read in Pause and Restore. Write it to the version of you who won't believe it.</div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ showSupportWarn }}" hint-placeholder-val="{{ false }}">
+        <div style="position:fixed;inset:0;z-index:50;background:rgba(14,24,29,.55);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box">
+        <div style="max-width:560px;width:100%;max-height:88vh;overflow:auto;background:#1b2c42;color:#f3f1ee;border-radius:14px;padding:26px 26px;display:flex;flex-direction:column;gap:12px;box-shadow:0 18px 50px rgba(10,18,22,.5)">
+          <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#c6adea">One check before you continue</div>
+          <div style="font-size:14px;line-height:1.6;color:#dde3ea;text-wrap:pretty;font-family:'Literata',Georgia,serif">For some people with borderline personality disorder, a “favorite person” is someone they rely on heavily for comfort, reassurance, or validation. That person may feel like the obvious support contact, but they may also be involved in the conflict or panic you need help stepping back from.</div>
+          <div style="font-family:'Quicksand',system-ui,sans-serif;font-size:19px;line-height:1.2;text-wrap:pretty;letter-spacing:-.005em">Could this person sometimes be a source of crisis?</div>
+          <div style="font-size:14px;line-height:1.6;color:#dde3ea;text-wrap:pretty;font-family:'Literata',Georgia,serif">If so, it's strongly recommended to add another person or support option outside that relationship. This is not a judgment about the relationship. It is a backup plan for when that person is unavailable or involved.</div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;padding-top:2px">
+            <button onClick="{{ warnBack }}" style="background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);color:#f3f1ee;border:none;border-radius:9px;padding:12px 18px;font-size:14px;font-weight:600;cursor:pointer">Go back and add another option</button>
+            <button onClick="{{ warnContinue }}" style="background:transparent;color:#dde3ea;border:1px solid rgba(238,244,243,.35);border-radius:9px;padding:12px 18px;font-size:14px;cursor:pointer">These are steady for me — continue</button>
+          </div>
+        </div>
+        </div>
+      </sc-if>
+      <button onClick="{{ setupNext }}" style="{{ setupNextStyle }}">{{ setupNextLabel }}</button>
+      <div style="font-size:12px;color:#dde3ea;text-align:center">Saved automatically to this device. Nothing leaves your browser.</div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isPre }}" hint-placeholder-val="{{ false }}">
+    <div style="width:100%;max-width:620px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;padding-top:28px">
+      <div style="width:100%;display:flex;justify-content:space-between;align-items:center">
+        <a onClick="{{ goHome }}" style="font-size:13px;cursor:pointer;color:#f3f1ee">← Home</a>
+        <div style="display:flex;gap:6px">
+          <sc-for list="{{ preDots }}" as="dot" hint-placeholder-count="5">
+            <div style="{{ dot.style }}"></div>
+          </sc-for>
+        </div>
+      </div>
+      <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#d3c0ec;font-weight:600">{{ preStepTag }}</div>
+      <div style="font-family:'Quicksand',system-ui,sans-serif;font-size:24px;font-weight:500;line-height:1.12;text-wrap:pretty;letter-spacing:-.005em;color:#f3f1ee">{{ preQuestion }}</div>
+      <div style="font-size:13.5px;color:#dde3ea;line-height:1.5;text-wrap:pretty">{{ preHint }}</div>
+
+      <sc-if value="{{ preShowChips }}" hint-placeholder-val="{{ true }}">
+        <div style="display:flex;flex-wrap:wrap;gap:9px">
+          <sc-for list="{{ preChips }}" as="c" hint-placeholder-count="8">
+            <button onClick="{{ c.pick }}" style="{{ c.style }}">{{ c.label }}</button>
+          </sc-for>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ preShowD }}" hint-placeholder-val="{{ false }}">
+        <div style="width:100%;display:flex;flex-direction:column;gap:16px">
+          <div style="background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:16px 18px;display:flex;flex-direction:column;gap:10px;color:#f3f1ee">
+            <div style="font-size:14.5px;font-weight:600">If they said “no” to this, could you accept it right now?</div>
+            <div style="display:flex;gap:8px">
+              <sc-for list="{{ d1Chips }}" as="c" hint-placeholder-count="3">
+                <button onClick="{{ c.pick }}" style="{{ c.style }}">{{ c.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+          <div style="background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:16px 18px;display:flex;flex-direction:column;gap:10px;color:#f3f1ee">
+            <div style="font-size:14.5px;font-weight:600">Is the next move something <em>you</em> will do, or something <em>they</em> must do?</div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <sc-for list="{{ d2Chips }}" as="c" hint-placeholder-count="3">
+                <button onClick="{{ c.pick }}" style="{{ c.style }}">{{ c.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+          <sc-if value="{{ dReady }}" hint-placeholder-val="{{ false }}">
+            <div style="{{ dVerdictStyle }}">
+              <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700">{{ dVerdictKind }}</div>
+              <div style="font-family:'Quicksand',system-ui,sans-serif;font-size:17px;line-height:1.45;text-wrap:pretty;letter-spacing:-.005em">{{ dVerdictText }}</div>
+            </div>
+          </sc-if>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ preShowE }}" hint-placeholder-val="{{ false }}">
+        <div style="width:100%;display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <sc-for list="{{ msgParts }}" as="p" hint-placeholder-count="5">
+              <button onClick="{{ p.toggle }}" style="{{ p.style }}">
+                <span style="{{ p.checkStyle }}">{{ p.check }}</span>
+                <span style="display:flex;flex-direction:column;gap:2px;text-align:left">
+                  <span style="font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;color:inherit;opacity:.88">{{ p.label }}</span>
+                  <span style="font-size:13.5px;line-height:1.45">{{ p.line }}</span>
+                </span>
+              </button>
+            </sc-for>
+          </div>
+          <div style="background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:20px 22px;box-shadow:0 1px 3px rgba(29,42,48,.08);color:#f3f1ee">
+            <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#d3c0ec;margin-bottom:10px">Your message</div>
+            <div style="font-family:'Literata',Georgia,serif;font-size:16.5px;line-height:1.6;white-space:pre-wrap;text-wrap:pretty">{{ assembled }}</div>
+          </div>
+          <div style="font-size:12px;color:#dde3ea;line-height:1.5">Only lines you selected are included. Nothing here promises what you didn't choose to promise.</div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <button onClick="{{ copyAssembled }}" style="background:#a786d5;color:#22103a;border:none;border-radius:9px;padding:12px 22px;font-size:14px;font-weight:600;cursor:pointer">{{ copyLabel }}</button>
+            <button onClick="{{ eDone }}" style="background:transparent;color:#dde3ea;border:1px solid rgba(255,255,255,.14);border-radius:9px;padding:12px 22px;font-size:14px;cursor:pointer">Done — back home</button>
+          </div>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ preShowNext }}" hint-placeholder-val="{{ true }}">
+        <button onClick="{{ preNext }}" style="{{ preNextStyle }}">{{ preNextLabel }}</button>
+      </sc-if>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isRed }}" hint-placeholder-val="{{ false }}">
+    <div style="width:100%;max-width:620px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:20px;padding-top:32px;animation:sanc 760ms cubic-bezier(.2,.7,.25,1) both">
+      <div style="background:#1b2c42;border-radius:14px;padding:28px 26px;color:#f3f1ee;display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;align-items:center;gap:10px;padding-bottom:2px">
+          <div style="width:7px;height:7px;border-radius:50%;background:#c6adea;color:#f3f1ee"></div>
+          <div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:#c6adea">Sanctuary — nothing is required of you here</div>
+        </div>
+        <div style="width:100%;display:flex;flex-direction:column;gap:10px">
+          <sc-for list="{{ redLines }}" as="ln" hint-placeholder-count="4">
+            <div style="font-family:'Quicksand',system-ui,sans-serif;font-size:19px;line-height:1.4;text-wrap:pretty;letter-spacing:-.005em">{{ ln.t }}</div>
+          </sc-for>
+          <sc-if value="{{ hasSignoff }}" hint-placeholder-val="{{ false }}">
+            <div style="font-size:13px;color:#dde3ea;font-style:italic;padding-top:4px">“{{ signoff }}” — you, calm</div>
+          </sc-if>
+        </div>
+        <div style="border-top:1px solid rgba(238,244,243,.18);padding-top:18px;display:flex;flex-direction:column;gap:14px">
+          <div style="font-size:13.5px;line-height:1.6;color:#dde3ea;text-wrap:pretty">This is not a punishment, and it is not a cure. You wanted ice cream; this is water. Water doesn't fix the desert — it's still exactly what your body needs, and it still works.</div>
+          <div style="width:100%;display:flex;justify-content:space-between;align-items:baseline">
+            <div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#dde3ea;font-weight:700">Step {{ redStepNum }} of 4</div>
+            <div style="font-size:11px;color:#dde3ea">{{ redStepsLeft }}</div>
+          </div>
+          <div style="font-family:'Quicksand',system-ui,sans-serif;font-size:24px;font-weight:500;letter-spacing:-.005em">{{ redTitle }}</div>
+          <div style="font-size:15px;line-height:1.55;color:#dde3ea;text-wrap:pretty;font-family:'Literata',Georgia,serif">{{ redBody }}</div>
+          <sc-if value="{{ redBreath }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:10px;padding:8px 0">
+              <div style="width:170px;height:170px;border-radius:50%;border:1px solid rgba(238,244,243,.3);display:flex;align-items:center;justify-content:center">
+                <div style="width:140px;height:140px;border-radius:50%;background:rgba(238,244,243,.16);animation:breath 10s ease-in-out infinite"></div>
+              </div>
+              <div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#dde3ea">in · 4 &nbsp;—&nbsp; out · 6</div>
+            </div>
+          </sc-if>
+          <button onClick="{{ redNext }}" style="background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);color:#f3f1ee;border:none;border-radius:10px;padding:16px;font-size:16px;font-weight:500;cursor:pointer;font-family:'Quicksand',system-ui,sans-serif;letter-spacing:-.005em">{{ redNextLabel }}</button>
+        </div>
+      </div>
+      <div style="width:100%;display:flex;flex-direction:column;gap:9px">
+        <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#dde3ea">Ways to be less alone right now</div>
+        <div style="display:flex;gap:9px;flex-wrap:wrap">
+          <sc-for list="{{ reachOpts }}" as="r" hint-placeholder-count="3">
+            <button onClick="{{ r.act }}" style="{{ r.style }}">
+              <span style="font-size:14px;font-weight:600">{{ r.label }}</span>
+              <span style="font-size:12px;color:#dde3ea;line-height:1.4">{{ r.sub }}</span>
+            </button>
+          </sc-for>
+        </div>
+        <button onClick="{{ toggleWrite }}" style="background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:14px;font-size:14px;color:#dde3ea;cursor:pointer">Write it out — it stays here</button>
+      </div>
+      <sc-if value="{{ writeOpen }}" hint-placeholder-val="{{ false }}">
+        <div style="width:100%;display:flex;flex-direction:column;gap:6px">
+          <div style="font-size:13px;color:#dde3ea;line-height:1.5">Let it be ugly here. These words can exist without becoming a decision.</div>
+          <textarea value="{{ note }}" onChange="{{ setNote }}" rows="5" placeholder="Say everything. There is no send button." style="background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:13px 15px;font-size:15px;line-height:1.55;color:#f3f1ee;outline:none;resize:vertical;font-family:'Literata',Georgia,serif"></textarea>
+          <sc-if value="{{ hasNoteText }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;gap:9px;flex-wrap:wrap">
+              <button onClick="{{ askDestroy }}" style="background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.14);border-radius:9px;padding:11px 17px;font-size:13.5px;font-weight:600;color:#f3f1ee;cursor:pointer">Destroy it</button>
+              <button onClick="{{ openTransform }}" style="background:#a786d5;color:#22103a;border:none;border-radius:9px;padding:11px 17px;font-size:13.5px;font-weight:600;cursor:pointer">Transform it</button>
+              <button onClick="{{ toggleWrite }}" style="background:transparent;border:1px solid rgba(255,255,255,.14);border-radius:9px;padding:11px 17px;font-size:13.5px;color:#dde3ea;cursor:pointer">Keep it private</button>
+            </div>
+          </sc-if>
+          <div style="font-size:12px;color:#dde3ea">Saved on this device only. You can reread it after the cooldown.</div>
+        </div>
+      </sc-if>
+      <sc-if value="{{ hasDoNot }}" hint-placeholder-val="{{ true }}">
+        <div style="width:100%;display:flex;flex-direction:column;gap:9px">
+          <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#dde3ea">What you decided, while calm</div>
+          <sc-for list="{{ doNotPairs }}" as="d" hint-placeholder-count="4">
+            <div style="background:rgba(123,138,163,.34);border-radius:10px;padding:12px 15px;display:flex;flex-direction:column;gap:3px">
+              <div style="font-size:13.5px;font-weight:600;color:#f3f1ee">When I want to {{ d.urge }}</div>
+              <sc-if value="{{ d.hasRepl }}" hint-placeholder-val="{{ true }}">
+                <div style="font-size:13.5px;color:#dde3ea;line-height:1.5;text-wrap:pretty">I will instead {{ d.repl }}</div>
+              </sc-if>
+            </div>
+          </sc-for>
+        </div>
+      </sc-if>
+      <sc-if value="{{ hasExtras }}" hint-placeholder-val="{{ false }}">
+        <div style="width:100%;display:flex;flex-direction:column;gap:8px">
+          <div style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:#dde3ea">Extra protection you chose — do one now</div>
+          <div style="display:flex;flex-wrap:wrap;gap:7px">
+            <sc-for list="{{ extras }}" as="x" hint-placeholder-count="2">
+              <div style="font-size:13px;color:#f3f1ee;background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border:1px solid rgba(255,255,255,.14);border-radius:99px;padding:8px 14px">{{ x.t }}</div>
+            </sc-for>
+          </div>
+        </div>
+      </sc-if>
+      <a onClick="{{ goHome }}" style="font-size:12px;color:#dde3ea;cursor:pointer;align-self:center">exit and go home (not recommended mid-wave)</a>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isCool }}" hint-placeholder-val="{{ false }}">
+    <div style="width:100%;max-width:620px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:22px;padding-top:44px;align-items:center">
+      <div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#d3c0ec;font-weight:700">Cooldown</div>
+      <div style="font-family:'Quicksand',system-ui,sans-serif;font-size:76px;font-weight:500;line-height:1;font-variant-numeric:tabular-nums;letter-spacing:-.005em;color:#f3f1ee">{{ cooldownClock }}</div>
+      <div style="width:100%;max-width:420px;height:6px;background:rgba(255,255,255,.14);border-radius:99px;overflow:hidden">
+        <div style="{{ coolBarStyle }}"></div>
+      </div>
+      <div style="font-size:14px;color:#dde3ea;text-align:center;line-height:1.55;max-width:44ch;text-wrap:pretty;font-family:'Literata',Georgia,serif">{{ coolNote }}</div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center">
+        <button onClick="{{ addTen }}" style="background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.14);border-radius:9px;padding:11px 18px;font-size:13.5px;color:#f3f1ee;cursor:pointer">+10 minutes</button>
+        <button onClick="{{ toggleWrite }}" style="background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.14);border-radius:9px;padding:11px 18px;font-size:13.5px;color:#f3f1ee;cursor:pointer">Write it out</button>
+      </div>
+      <div style="width:100%;display:flex;gap:9px;flex-wrap:wrap;justify-content:center">
+        <sc-for list="{{ reachOpts }}" as="r" hint-placeholder-count="3">
+          <button onClick="{{ r.act }}" style="{{ r.style }}">
+            <span style="font-size:14px;font-weight:600">{{ r.label }}</span>
+            <span style="font-size:12px;color:#dde3ea;line-height:1.4">{{ r.sub }}</span>
+          </button>
+        </sc-for>
+      </div>
+      <sc-if value="{{ writeOpen }}" hint-placeholder-val="{{ false }}">
+        <div style="width:100%;display:flex;flex-direction:column;gap:9px">
+          <div style="font-size:13px;color:#dde3ea;line-height:1.5;text-align:center">Let it be ugly here. These words can exist without becoming a decision.</div>
+          <textarea value="{{ note }}" onChange="{{ setNote }}" rows="5" placeholder="Say everything. There is no send button." style="width:100%;box-sizing:border-box;background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:13px 15px;font-size:15px;line-height:1.55;color:#f3f1ee;outline:none;resize:vertical;font-family:'Literata',Georgia,serif"></textarea>
+          <sc-if value="{{ hasNoteText }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex;gap:9px;flex-wrap:wrap;justify-content:center">
+              <button onClick="{{ askDestroy }}" style="background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.14);border-radius:9px;padding:11px 17px;font-size:13.5px;font-weight:600;color:#f3f1ee;cursor:pointer">Destroy it</button>
+              <button onClick="{{ openTransform }}" style="background:#a786d5;color:#22103a;border:none;border-radius:9px;padding:11px 17px;font-size:13.5px;font-weight:600;cursor:pointer">Transform it</button>
+              <button onClick="{{ toggleWrite }}" style="background:transparent;border:1px solid rgba(255,255,255,.14);border-radius:9px;padding:11px 17px;font-size:13.5px;color:#dde3ea;cursor:pointer">Keep it private</button>
+            </div>
+          </sc-if>
+        </div>
+      </sc-if>
+      <button onPointerDown="{{ holdStart }}" onPointerUp="{{ holdStop }}" onPointerLeave="{{ holdStop }}" style="{{ holdBtnStyle }}">
+        <div style="{{ holdFillStyle }}"></div>
+        <span style="position:relative">{{ holdLabel }}</span>
+      </button>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ isRecon }}" hint-placeholder-val="{{ false }}">
+    <div style="width:100%;max-width:620px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;padding-top:32px">
+      <div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#d3c0ec;font-weight:700">Cooldown complete</div>
+      <div style="font-family:'Quicksand',system-ui,sans-serif;font-size:26px;font-weight:500;line-height:1.12;text-wrap:pretty;letter-spacing:-.005em;color:#f3f1ee">You don't have to go back to the argument. Choose what happens next.</div>
+      <sc-if value="{{ hasNote }}" hint-placeholder-val="{{ false }}">
+        <button onClick="{{ toggleWrite }}" style="background:rgba(123,138,163,.34);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:12px 16px;font-size:13px;color:#dde3ea;text-align:left;cursor:pointer">You wrote something while flooded. {{ noteVerb }}</button>
+        <sc-if value="{{ writeOpen }}" hint-placeholder-val="{{ false }}">
+          <div style="background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:16px 18px;font-size:15px;line-height:1.6;white-space:pre-wrap;color:#dde3ea;letter-spacing:-.012em;font-family:'Literata',Georgia,serif">{{ note }}</div>
+        </sc-if>
+      </sc-if>
+      <div style="width:100%;display:flex;flex-direction:column;gap:10px">
+        <sc-for list="{{ reconOpts }}" as="r" hint-placeholder-count="3">
+          <button onClick="{{ r.pick }}" style="{{ r.style }}">
+            <span style="font-family:'Quicksand',system-ui,sans-serif;font-size:17px;font-weight:500;letter-spacing:-.005em">{{ r.title }}</span>
+            <span style="font-size:13px;color:#dde3ea;line-height:1.45">{{ r.sub }}</span>
+          </button>
+        </sc-for>
+      </div>
+      <sc-if value="{{ reconIsConnect }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;flex-direction:column;gap:12px;background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:20px;color:#f3f1ee">
+          <div style="font-size:13px;font-weight:600">What I need to communicate is…</div>
+          <input value="{{ rcNeed }}" onChange="{{ setRcNeed }}" style="background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:10px 12px;font-size:14px;outline:none;font-family:'Literata',Georgia,serif;color:#f3f1ee">
+          <div style="font-size:13px;font-weight:600">What I'm asking for is…</div>
+          <input value="{{ rcAsk }}" onChange="{{ setRcAsk }}" style="background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:10px 12px;font-size:14px;outline:none;font-family:'Literata',Georgia,serif;color:#f3f1ee">
+          <div style="font-size:13px;font-weight:600">If that can't happen, I will…</div>
+          <input value="{{ rcElse }}" onChange="{{ setRcElse }}" style="background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:10px 12px;font-size:14px;outline:none;font-family:'Literata',Georgia,serif;color:#f3f1ee">
+          <div style="font-size:12px;color:#dde3ea;line-height:1.5">The last blank describes what <em>you</em> will do — not a consequence designed to frighten them into compliance.</div>
+          <div style="font-family:'Literata',Georgia,serif;font-size:16px;line-height:1.6;border-top:1px solid rgba(255,255,255,.14);padding-top:14px;white-space:pre-wrap;text-wrap:pretty">{{ reconMsg }}</div>
+          <button onClick="{{ copyRecon }}" style="background:#a786d5;color:#22103a;border:none;border-radius:9px;padding:12px;font-size:14px;font-weight:600;cursor:pointer">{{ copyLabel }}</button>
+        </div>
+      </sc-if>
+      <sc-if value="{{ reconIsBoundary }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;flex-direction:column;gap:10px;background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:20px;color:#f3f1ee">
+          <sc-for list="{{ boundaryOpts }}" as="b" hint-placeholder-count="3">
+            <button onClick="{{ b.pick }}" style="{{ b.style }}">{{ b.t }}</button>
+          </sc-for>
+          <button onClick="{{ copyBoundary }}" style="background:#a786d5;color:#22103a;border:none;border-radius:9px;padding:12px;font-size:14px;font-weight:600;cursor:pointer">{{ copyLabel }}</button>
+        </div>
+      </sc-if>
+      <sc-if value="{{ reconIsSpace }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;flex-direction:column;gap:12px;background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:20px;color:#f3f1ee">
+          <div style="font-size:14px;line-height:1.55;color:#dde3ea;text-wrap:pretty;font-family:'Literata',Georgia,serif">Taking more space is a complete answer. You can start another cooldown, or simply stop here — reconnecting is not owed on a schedule.</div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <button onClick="{{ startAnotherCooldown }}" style="background:#1b2c42;color:#f3f1ee;border:none;border-radius:9px;padding:12px 18px;font-size:14px;font-weight:600;cursor:pointer">Start another cooldown</button>
+            <button onClick="{{ goHome }}" style="background:transparent;border:1px solid rgba(255,255,255,.14);border-radius:9px;padding:12px 18px;font-size:14px;color:#dde3ea;cursor:pointer">Stop here</button>
+          </div>
+        </div>
+      </sc-if>
+      <a onClick="{{ goHome }}" style="font-size:13px;cursor:pointer;align-self:center;color:#f3f1ee">Done — back home</a>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ noteOverlayOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed;inset:0;z-index:60;background:rgba(13,22,27,.72);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box">
+      <div style="width:100%;max-width:640px;max-height:88vh;overflow:auto;background:#1b2c42;color:#f3f1ee;border-radius:14px;padding:26px;display:flex;flex-direction:column;gap:14px;box-shadow:0 18px 50px rgba(10,18,22,.55)">
+
+        <sc-if value="{{ nmConfirm }}" hint-placeholder-val="{{ true }}">
+          <div style="width:100%;display:flex;flex-direction:column;gap:13px">
+            <div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#c6adea">Destroy</div>
+            <div style="font-family:'Quicksand',system-ui,sans-serif;font-size:22px;line-height:1.14;text-wrap:pretty;letter-spacing:-.005em">This permanently deletes what you wrote.</div>
+            <div style="font-size:14px;line-height:1.6;color:#dde3ea;text-wrap:pretty;font-family:'Literata',Georgia,serif">No undo, no copy, nothing left on this device. That is the point — and it should be a decision you make on purpose, not a reflex.</div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;padding-top:2px">
+              <button onClick="{{ doDestroy }}" style="background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);color:#f3f1ee;border:none;border-radius:9px;padding:12px 18px;font-size:14px;font-weight:700;cursor:pointer">Destroy it permanently</button>
+              <button onClick="{{ closeNote }}" style="background:transparent;color:#dde3ea;border:1px solid rgba(238,244,243,.35);border-radius:9px;padding:12px 18px;font-size:14px;cursor:pointer">Keep it for now</button>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ nmDestroying }}" hint-placeholder-val="{{ false }}">
+          <div style="position:relative;overflow:hidden;border-radius:10px;min-height:220px;display:flex;align-items:center;justify-content:center;padding:22px">
+            <div style="font-family:'Literata',Georgia,serif;font-size:15px;line-height:1.6;color:#dde3ea;white-space:pre-wrap;animation:sink 1.9s ease-in forwards;letter-spacing:-.012em">{{ destroyPreview }}</div>
+            <div style="position:absolute;left:50%;top:60%;width:40px;height:40px;margin:-20px 0 0 -20px;border-radius:50%;background:radial-gradient(circle,#142338 40%,rgba(14,23,28,.85) 70%,rgba(14,23,28,0) 100%);animation:ink 1.9s ease-in forwards"></div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ nmDestroyed }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;gap:14px;align-items:flex-start;animation:rise .4s ease-out both">
+            <div style="font-family:'Quicksand',system-ui,sans-serif;font-size:30px;font-weight:500;letter-spacing:-.005em">Gone.</div>
+            <div style="font-size:15px;line-height:1.6;color:#dde3ea;text-wrap:pretty;font-family:'Literata',Georgia,serif">You let it exist without sending it. That counts.</div>
+            <button onClick="{{ closeNote }}" style="background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);color:#f3f1ee;border:none;border-radius:9px;padding:12px 20px;font-size:14px;font-weight:600;cursor:pointer">Back to the cooldown</button>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ nmMenu }}" hint-placeholder-val="{{ false }}">
+          <div style="width:100%;display:flex;flex-direction:column;gap:13px">
+            <div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#c6adea">Transform</div>
+            <div style="font-family:'Quicksand',system-ui,sans-serif;font-size:22px;line-height:1.14;text-wrap:pretty;letter-spacing:-.005em">Give the words somewhere to go that isn't the relationship.</div>
+            <div style="font-size:13.5px;line-height:1.6;color:#dde3ea;text-wrap:pretty">Nothing rewrites what you wrote or makes it nicer. You choose what it becomes.</div>
+            <div style="display:flex;flex-direction:column;gap:9px;padding-top:2px">
+              <button onClick="{{ openBloom }}" style="text-align:left;background:transparent;border:1px solid rgba(238,244,243,.3);border-radius:11px;padding:15px 17px;cursor:pointer;color:#f3f1ee;display:flex;flex-direction:column;gap:3px">
+                <span style="font-size:16px;font-weight:600">Ink bloom</span>
+                <span style="font-size:13px;color:#dde3ea;line-height:1.45">An image built from the shape of your own writing — its length, its shouting, its rhythm. The same words always make the same picture.</span>
+              </button>
+              <button onClick="{{ openDistill }}" style="text-align:left;background:transparent;border:1px solid rgba(238,244,243,.3);border-radius:11px;padding:15px 17px;cursor:pointer;color:#f3f1ee;display:flex;flex-direction:column;gap:3px">
+                <span style="font-size:16px;font-weight:600">Distill</span>
+                <span style="font-size:13px;color:#dde3ea;line-height:1.45">Tap only the words that are actually true. The rest falls away. You're the author — nothing is guessed for you.</span>
+              </button>
+              <button onClick="{{ openNeed }}" style="text-align:left;background:transparent;border:1px solid rgba(238,244,243,.3);border-radius:11px;padding:15px 17px;cursor:pointer;color:#f3f1ee;display:flex;flex-direction:column;gap:3px">
+                <span style="font-size:16px;font-weight:600">The need underneath</span>
+                <span style="font-size:13px;color:#dde3ea;line-height:1.45">Name what the writing was reaching for. It can carry over into reconnect later, if you want it to.</span>
+              </button>
+            </div>
+            <button onClick="{{ closeNote }}" style="align-self:flex-start;background:transparent;color:#8b9fa3;border:none;padding:6px 0;font-size:13px;cursor:pointer">Close</button>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ nmBloom }}" hint-placeholder-val="{{ false }}">
+          <div style="width:100%;display:flex;flex-direction:column;gap:13px">
+            <div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#c6adea">Ink bloom</div>
+            <canvas id="bloom-canvas" width="760" height="480" style="width:100%;height:auto;border-radius:11px;display:block;background:#142338"></canvas>
+            <div style="font-size:13px;color:#dde3ea;line-height:1.55;text-wrap:pretty">This came out of what you wrote — nothing else. The words themselves stay private.</div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap">
+              <button onClick="{{ downloadBloom }}" style="background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);color:#f3f1ee;border:none;border-radius:9px;padding:11px 18px;font-size:13.5px;font-weight:600;cursor:pointer">Save the image</button>
+              <button onClick="{{ backToMenu }}" style="background:transparent;color:#dde3ea;border:1px solid rgba(238,244,243,.35);border-radius:9px;padding:11px 18px;font-size:13.5px;cursor:pointer">Back</button>
+            </div>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ nmDistill }}" hint-placeholder-val="{{ false }}">
+          <div style="width:100%;display:flex;flex-direction:column;gap:13px">
+            <div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#c6adea">Distill</div>
+            <div style="font-size:14px;line-height:1.6;color:#dde3ea;font-family:'Literata',Georgia,serif">Tap the words that are actually true.</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;max-height:32vh;overflow:auto;padding:2px">
+              <sc-for list="{{ distillWords }}" as="w" hint-placeholder-count="12">
+                <button onClick="{{ w.toggle }}" style="{{ w.style }}">{{ w.w }}</button>
+              </sc-for>
+            </div>
+            <sc-if value="{{ hasDistilled }}" hint-placeholder-val="{{ false }}">
+              <div style="background:#142338;border-radius:11px;padding:24px;font-family:'Quicksand',system-ui,sans-serif;font-size:23px;line-height:1.45;text-wrap:pretty;animation:rise .3s ease-out both;letter-spacing:-.005em">{{ distilled }}</div>
+            </sc-if>
+            <button onClick="{{ backToMenu }}" style="align-self:flex-start;background:transparent;color:#dde3ea;border:1px solid rgba(238,244,243,.35);border-radius:9px;padding:11px 18px;font-size:13.5px;cursor:pointer">Back</button>
+          </div>
+        </sc-if>
+
+        <sc-if value="{{ nmNeed }}" hint-placeholder-val="{{ false }}">
+          <div style="width:100%;display:flex;flex-direction:column;gap:13px">
+            <div style="font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:#c6adea">The need underneath</div>
+            <div style="font-size:14px;line-height:1.6;color:#dde3ea;text-wrap:pretty;font-family:'Literata',Georgia,serif">What was the writing reaching for? Pick as many as fit.</div>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+              <sc-for list="{{ needChips }}" as="n" hint-placeholder-count="8">
+                <button onClick="{{ n.toggle }}" style="{{ n.style }}">{{ n.label }}</button>
+              </sc-for>
+            </div>
+            <sc-if value="{{ hasNeed }}" hint-placeholder-val="{{ false }}">
+              <div style="width:100%;display:flex;flex-direction:column;gap:11px">
+                <div style="background:#142338;border-radius:11px;padding:20px;font-family:'Quicksand',system-ui,sans-serif;font-size:19px;line-height:1.5;text-wrap:pretty;letter-spacing:-.005em">{{ needStatement }}</div>
+                <button onClick="{{ useNeedInReconnect }}" style="align-self:flex-start;background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);color:#f3f1ee;border:none;border-radius:9px;padding:11px 18px;font-size:13.5px;font-weight:600;cursor:pointer">Carry this into reconnect</button>
+              </div>
+            </sc-if>
+            <button onClick="{{ backToMenu }}" style="align-self:flex-start;background:transparent;color:#dde3ea;border:1px solid rgba(238,244,243,.35);border-radius:9px;padding:11px 18px;font-size:13.5px;cursor:pointer">Back</button>
+          </div>
+        </sc-if>
+
+      </div>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;tone&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;default&quot;: &quot;mixed&quot;, &quot;options&quot;: [&quot;mixed&quot;, &quot;directive&quot;, &quot;warm&quot;], &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Crisis copy&quot;}, &quot;utilityStyle&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;default&quot;: &quot;cards&quot;, &quot;options&quot;: [&quot;cards&quot;, &quot;links&quot;, &quot;list&quot;], &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Home layout&quot;}}">
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.LS = 'dbt-backup-proto-v1';
+    this.bloomRef = React.createRef();
+    const saved = this.load();
+    this.state = Object.assign({
+      screen: 'home', demo: true,
+      cfg: this.demoCfg(),
+      setupStep: 0,
+      pre: { step: 0, a: null, b: null, c: null, d1: null, d2: null, parts: { care: true, emotion: true, reality: false, ask: true, predict: true } },
+      redStep: 0, cooldownEnd: null, cooldownTotal: 0,
+      note: '', writeOpen: false, copied: false, holdPct: 0,
+      reconMode: null, rcNeed: '', rcAsk: '', rcElse: '', boundaryPick: 0,
+      now: Date.now()
+    }, saved);
+  }
+  demoCfg() {
+    return {
+      cooldownMin: 1, returnTimePref: 'exact', warmline: '',
+      supports: { talk: { on: true, entries: ['Maya', 'Jess'] }, honest: { on: true, entries: ['Dev'] }, pro: { on: false, entries: [''] }, place: { on: true, entries: ['The library on 4th'] }, none: false },
+      ladderPlace: '',
+      doNot: this.normalizeDoNot(['Send another message', 'Threaten to leave', 'Show up unannounced', 'Lash out at someone uninvolved']),
+      signoff: 'You wrote this plan on a good day. Trust it.'
+    };
+  }
+  blankCfg() {
+    return { cooldownMin: 30, returnTimePref: 'exact', warmline: '', supports: { talk: { on: false, entries: [''] }, honest: { on: false, entries: [''] }, pro: { on: false, entries: [''] }, place: { on: false, entries: [''] }, none: false }, ladderPlace: '', doNot: [], signoff: '' };
+  }
+  guardBank() {
+    const D = 'not make permanent decisions during temporary flooding \u2014 this waits until the cooldown ends and I\u2019ve slept, eaten, and talked to someone outside the conflict';
+    return [
+      { key: 'contact', title: 'Trying to get contact, reassurance, or an answer', why: 'When uncertainty feels unbearable, I may try to make someone respond, stay, explain, or reassure me immediately.', items: [
+        ['Send another message', 'write what I need to say in the private draft and continue the cooldown'],
+        ['Send several messages in a row', 'keep all of it in one draft and send none of it until the timer ends'],
+        ['Call repeatedly', 'wait until the timer ends, then decide whether one clear request is still needed'],
+        ['Contact them through another account', 'leave the other accounts closed and stay with the cooldown'],
+        ['Show up unannounced', 'stay where I am and do one grounding action', 2],
+        ['Threaten to leave', 'say nothing about the future of the relationship until I\u2019m calm'],
+        ['Block them hoping they\u2019ll react', 'leave the settings alone \u2014 nothing about contact gets decided today'],
+        ['Demand an immediate relationship decision', 'let the question wait a full day before I ask it']
+      ] },
+      { key: 'understood', title: 'Trying to make the pain understood', why: 'When I feel dismissed or powerless, I may raise the stakes so the other person understands how serious the pain feels.', items: [
+        ['Say something I can\u2019t take back', 'write \u201cWhat I need them to understand is\u2026\u201d and keep it unsent until I\u2019m calm'],
+        ['Bring up past injuries to win', 'stay with the one thing that actually happened today'],
+        ['Threaten self-harm', 'tell a support contact that I\u2019m struggling, rather than using it as a message', 3],
+        ['Delete photos, accounts, or shared work', 'leave everything where it is \u2014 nothing gets deleted while I\u2019m flooded'],
+        ['Post publicly about the conflict', 'put it in the private draft, not anywhere someone else can read it'],
+        ['Reveal something private', 'keep their private things private, even now'],
+        ['Try to make them jealous', 'skip it \u2014 proof obtained that way never actually lands'],
+        ['Say something designed to hurt them', 'name it to myself first: \u201cI want them to feel what I feel right now\u201d']
+      ] },
+      { key: 'numb', title: 'Trying not to feel it', why: 'When the emotion feels intolerable, I may try to numb, distract, or escape it as fast as possible.', note: 'None of these are automatically harmful. This is about the times I reach for them to escape an emotional emergency.', items: [
+        ['Drink alcohol', 'choose one grounding action and delay the decision for the length of the cooldown', 2],
+        ['Use drugs', 'choose one grounding action and delay the decision for the length of the cooldown', 2],
+        ['Shop or spend impulsively', 'add the item to a saved list and wait 24 hours before buying'],
+        ['Binge or restrict food', 'eat something ordinary and small, then restart the timer'],
+        ['Sleep to avoid the situation', 'lie down for twenty minutes with an alarm, not the whole evening'],
+        ['Scroll compulsively', 'put the phone in another room for the rest of the cooldown'],
+        ['Gamble', 'delay anything financial until the cooldown ends', 2],
+        ['Seek risky sex or attention', 'delay anything I\u2019d have to undo tomorrow until the cooldown ends', 2]
+      ] },
+      { key: 'spill', title: 'Letting the emotion spill onto someone else', why: 'When I can\u2019t express the feeling safely toward its source, I may release it somewhere else.', items: [
+        ['Lash out at someone uninvolved', 'say \u201cI\u2019m overwhelmed and need a little space. This is not about you.\u201d'],
+        ['Start another argument', 'name the feeling privately rather than finding a second fight'],
+        ['Become cruel or sarcastic', 'go quiet rather than sharp, and come back when I can be plain'],
+        ['Withdraw affection from someone else', 'tell them I need space without making them pay for it'],
+        ['Take frustration out on family, coworkers, or pets', 'leave the room before I speak, and do one grounding action'],
+        ['Complain to people until they\u2019re activated too', 'ask for ordinary conversation rather than recruiting an ally']
+      ] },
+      { key: 'proof', title: 'Looking for proof that I matter', why: 'When I feel rejected or unwanted, I may look for fast validation from someone else.', note: 'Contacting outside support is healthy. This is about using another person for leverage, retaliation, or emergency proof of worth.', items: [
+        ['Message an ex', 'contact a support person for ordinary conversation'],
+        ['Flirt to feel wanted', 'do one grounding action and let the feeling be uncomfortable without an audience'],
+        ['Seek reassurance from several people', 'ask one person for ordinary conversation, not a verdict'],
+        ['Contact someone to provoke jealousy', 'leave them out of it entirely'],
+        ['Ask people to tell me I\u2019m right', 'reach out for grounding without asking anyone to adjudicate'],
+        ['Recruit someone to intervene in the conflict', 'reach out for ordinary conversation or grounding, without asking them to contact, investigate, or punish anyone']
+      ] },
+      { key: 'irreversible', title: 'Acting before the feeling passes', why: 'When my body treats this like an emergency, I may do something dangerous or irreversible before I can think it through.', items: [
+        ['Drive recklessly', D, 3], ['Leave somewhere unsafe', D, 3], ['Break or throw things', D, 2],
+        ['Quit my job', D], ['End the relationship immediately', D], ['Make a major purchase', D, 2],
+        ['Destroy files or belongings', D], ['Harm myself', D, 3], ['Threaten or confront someone in person', D, 3]
+      ] }
+    ];
+  }
+  replFor(label) {
+    let out = '';
+    this.guardBank().forEach(c => c.items.forEach(it => { if (it[0] === label) out = it[1]; }));
+    return out;
+  }
+  riskyFor(label) {
+    let out = 0;
+    this.guardBank().forEach(c => c.items.forEach(it => { if (it[0] === label && it[2]) out = it[2]; }));
+    return out;
+  }
+  normalizeDoNot(list) {
+    return (list || []).filter(Boolean).map(x => (typeof x === 'string' ? { u: x, r: this.replFor(x) } : { u: x.u || '', r: x.r || '' })).filter(x => x.u);
+  }
+  normalizeSupports(sup) {
+    const base = this.blankCfg().supports;
+    const out = { none: !!(sup && sup.none) };
+    ['talk', 'honest', 'pro', 'place'].forEach(k => {
+      const v = (sup && sup[k]) || base[k];
+      let entries = v.entries;
+      if (!entries || !entries.length) entries = [v.who || ''];
+      out[k] = { on: !!v.on, entries: entries.slice(0, 3) };
+    });
+    return out;
+  }
+  load() {
+    try {
+      const raw = localStorage.getItem('dbt-backup-proto-v1');
+      if (!raw) return {};
+      const s = JSON.parse(raw);
+      const out = { demo: s.demo !== false, cfg: s.cfg || undefined, note: s.note || '', cooldownEnd: s.cooldownEnd || null, cooldownTotal: s.cooldownTotal || 0 };
+      if (s.cooldownEnd && s.cooldownEnd > Date.now()) out.screen = 'cooldown';
+      else if (s.cooldownEnd && s.cooldownEnd <= Date.now()) { out.screen = 'recon'; out.cooldownEnd = null; }
+      if (!out.cfg) delete out.cfg;
+      else if (!out.cfg.supports) {
+        // legacy record from an earlier version: no support architecture
+        const legacy = out.cfg;
+        out.cfg = out.demo ? this.demoCfg() : this.blankCfg();
+        out.cfg.cooldownMin = legacy.cooldownMin || out.cfg.cooldownMin;
+        if (legacy.doNot && legacy.doNot.length) out.cfg.doNot = this.normalizeDoNot(legacy.doNot);
+        if (legacy.signoff) out.cfg.signoff = legacy.signoff;
+        if (legacy.contact) out.cfg.supports.talk = { on: true, entries: [legacy.contact] };
+      } else out.cfg = Object.assign(this.blankCfg(), out.cfg, { supports: this.normalizeSupports(out.cfg.supports), doNot: this.normalizeDoNot(out.cfg.doNot) });
+      return out;
+    } catch (e) { return {}; }
+  }
+  persist() {
+    const { demo, cfg, note, cooldownEnd, cooldownTotal } = this.state;
+    try { localStorage.setItem(this.LS, JSON.stringify({ demo, cfg, note, cooldownEnd, cooldownTotal })); } catch (e) {}
+  }
+  componentDidMount() {
+    this.tick = setInterval(() => {
+      const s = this.state;
+      const upd = { now: Date.now() };
+      if (s.screen === 'cooldown' && s.cooldownEnd && Date.now() >= s.cooldownEnd) {
+        upd.screen = 'recon'; upd.cooldownEnd = null; upd.reconMode = null; upd.writeOpen = false;
+        this.setState(upd, () => this.persist()); return;
+      }
+      if (s.holdActive) {
+        upd.holdPct = Math.min(100, s.holdPct + 8);
+        if (upd.holdPct >= 100) { upd.holdActive = false; upd.holdPct = 0; upd.screen = 'recon'; upd.cooldownEnd = null; upd.reconMode = null; this.setState(upd, () => this.persist()); return; }
+      }
+      this.setState(upd);
+    }, 250);
+  }
+  componentWillUnmount() { clearInterval(this.tick); }
+  componentDidUpdate() {
+    if (this.state.noteMode !== 'bloom') { this._drawnFor = null; return; }
+    if (this._drawnFor !== this.state.note) {
+      this._drawnFor = this.state.note;
+      requestAnimationFrame(() => this.drawBloom());
+    }
+  }
+  hash(str) {
+    let h = 2166136261;
+    for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 16777619); }
+    return h >>> 0;
+  }
+  rng(seed) { let a = seed >>> 0; return () => { a = (a + 0x6D2B79F5) >>> 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+  drawBloom() {
+    const cv = document.getElementById('bloom-canvas');
+    if (!cv) return;
+    const text = this.state.note || '';
+    const W = 760, H = 480, dpr = Math.min(2, window.devicePixelRatio || 1);
+    cv.width = W * dpr; cv.height = H * dpr;
+    const g = cv.getContext('2d');
+    g.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const seed = this.hash(text || 'empty');
+    const r = this.rng(seed);
+    const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+    const letters = text.replace(/[^a-z]/gi, '').length || 1;
+    const caps = (text.replace(/[^A-Z]/g, '').length / letters);
+    const bangs = (text.match(/[!?]/g) || []).length;
+    const breaks = (text.match(/\n/g) || []).length;
+    const hour = new Date().getHours();
+    const baseHue = (seed % 360);
+    const night = hour < 6 || hour >= 21;
+    const L = night ? 9 : 13;
+    g.fillStyle = 'hsl(' + baseHue + ' 22% ' + L + '%)';
+    g.fillRect(0, 0, W, H);
+    const blobs = Math.max(6, Math.min(24, Math.round(6 + words / 9 + breaks)));
+    for (let i = 0; i < blobs; i++) {
+      const x = r() * W, y = r() * H;
+      const rad = (40 + r() * 190) * (1 + caps * 1.4);
+      const hue = (baseHue + (r() - 0.5) * 90 + caps * 60) % 360;
+      const sat = 30 + r() * 45 + caps * 20;
+      const lig = 22 + r() * 38;
+      const grad = g.createRadialGradient(x, y, 0, x, y, rad);
+      grad.addColorStop(0, 'hsla(' + hue + ' ' + sat + '% ' + lig + '% / ' + (0.5 + r() * 0.35) + ')');
+      grad.addColorStop(1, 'hsla(' + hue + ' ' + sat + '% ' + lig + '% / 0)');
+      g.fillStyle = grad;
+      g.beginPath(); g.arc(x, y, rad, 0, Math.PI * 2); g.fill();
+    }
+    for (let i = 0; i < bangs && i < 30; i++) {
+      g.strokeStyle = 'hsla(' + ((baseHue + 180) % 360) + ' 60% 78% / ' + (0.10 + r() * 0.22) + ')';
+      g.lineWidth = 0.6 + r() * 2.2;
+      const x = r() * W, y = r() * H, len = 60 + r() * 320, ang = (r() - 0.5) * 1.1;
+      g.beginPath(); g.moveTo(x, y); g.lineTo(x + Math.cos(ang) * len, y + Math.sin(ang) * len); g.stroke();
+    }
+    const lines = Math.max(1, breaks + 1);
+    for (let i = 0; i < lines && i < 40; i++) {
+      const y = (i + 1) * (H / (lines + 1)) + (r() - 0.5) * 14;
+      g.fillStyle = 'hsla(' + baseHue + ' 20% 92% / ' + (0.05 + r() * 0.07) + ')';
+      g.fillRect(W * 0.08 + r() * 40, y, W * (0.3 + r() * 0.55), 0.8 + r() * 1.6);
+    }
+    g.fillStyle = 'hsla(0 0% 100% / .28)';
+    g.font = '11px ui-monospace, Menlo, monospace';
+    g.fillText(words + ' words · ' + new Date().toLocaleDateString(), 20, H - 18);
+  }
+  downloadBloom() {
+    const cv = document.getElementById('bloom-canvas');
+    if (!cv) return;
+    const a = document.createElement('a');
+    a.href = cv.toDataURL('image/png');
+    a.download = 'transformed.png';
+    a.click();
+  }
+  set(patch, cb) { this.setState(patch, () => { this.persist(); if (cb) cb(); }); }
+  startCooldown() {
+    const min = this.state.demo ? 1 : (this.state.cfg.cooldownMin || 30);
+    const ms = min * 60000;
+    this.set({ screen: 'cooldown', cooldownEnd: Date.now() + ms, cooldownTotal: ms, writeOpen: false, holdPct: 0 });
+  }
+  chipStyle(sel) {
+    return 'font-size:13.5px;padding:9px 15px;border-radius:99px;cursor:pointer;line-height:1.3;text-align:left;' +
+      (sel ? 'background:rgba(203,180,232,.92);color:#231338;border:1px solid rgba(255,255,255,.5);font-weight:600' : 'background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);color:#eaeff4;border:1px solid rgba(255,255,255,.14)');
+  }
+  copy(text) {
+    const done = () => { this.setState({ copied: true }); setTimeout(() => this.setState({ copied: false }), 1600); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, done);
+    else done();
+  }
+  fmtClock(ms) {
+    const t = Math.max(0, Math.ceil(ms / 1000));
+    const m = Math.floor(t / 60), sec = t % 60;
+    return m + ':' + String(sec).padStart(2, '0');
+  }
+  fmtTime(d) { let h = d.getHours(), m = d.getMinutes(), ap = h >= 12 ? 'pm' : 'am'; h = h % 12 || 12; return h + ':' + String(m).padStart(2, '0') + ap; }
+  needPhrase(c) {
+    const map = {
+      'Acknowledgment that I\u2019m hurt': 'tell me you hear that I\u2019m hurt, even if we still disagree',
+      'An honest answer': 'give me an honest answer, even if it\u2019s not the one I want',
+      'Reassurance this isn\u2019t abandonment': 'remind me that us fighting doesn\u2019t mean you\u2019re leaving',
+      'Consistency between words and actions': 'say what you\u2019ll do, and then do that',
+      'A clear boundary from them': 'tell me clearly what you need from me right now',
+      'A specific time to reconnect': 'give me a specific time when we can talk',
+      'Space without punishment or ambiguity': 'take the space you need and tell me when you\u2019ll be back',
+      'To finish speaking without interruption': 'let me finish what I need to say before responding'
+    };
+    return map[c] || 'tell me where we actually stand';
+  }
+  renderVals() {
+    const s = this.state, cfg = s.cfg, tone = this.props.tone || 'mixed';
+    const warm = tone === 'warm';
+    const goto = (screen, extra) => () => this.set(Object.assign({ screen, writeOpen: false, copied: false, noteMode: null }, extra));
+    const darkChipG = (sel) => 'font-size:13.5px;padding:9px 15px;border-radius:99px;cursor:pointer;line-height:1.3;text-align:left;' +
+      (sel ? 'background:rgba(152,166,192,.36);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3);color:#f3f1ee;border:1px solid rgba(255,255,255,.28);font-weight:600' : 'background:transparent;color:#dde3ea;border:1px solid rgba(238,244,243,.35)');
+    // pre-crisis data
+    const A = ['Someone became distant', 'I feel ignored', 'A promise was broken', 'I feel misunderstood', 'Someone needs space', 'I\u2019m unsure where I stand', 'A boundary was crossed', 'I feel criticized or rejected', 'Something else'];
+    const B = ['They hate me', 'They\u2019re leaving permanently', 'I don\u2019t matter', 'I\u2019m being manipulated', 'I\u2019ll never be understood', 'I have to resolve this immediately', 'I\u2019m a bad person', 'I\u2019m trapped or powerless'];
+    const C = ['Acknowledgment that I\u2019m hurt', 'An honest answer', 'Reassurance this isn\u2019t abandonment', 'Consistency between words and actions', 'A clear boundary from them', 'A specific time to reconnect', 'Space without punishment or ambiguity', 'To finish speaking without interruption'];
+    const pre = s.pre, step = pre.step;
+    const setPre = (patch) => this.set({ pre: Object.assign({}, pre, patch) });
+    const stepMeta = [
+      { tag: 'Step A \u00b7 What happened', q: 'What actually happened?', hint: 'Just the observable event \u2014 the camera version, before the story.', key: 'a', list: A },
+      { tag: 'Step B \u00b7 The story', q: 'What are you afraid this means?', hint: 'This is the meaning your mind attached. Naming it separates it from the event.', key: 'b', list: B },
+      { tag: 'Step C \u00b7 The need', q: 'What do you actually need?', hint: 'Underneath the urge to make them understand, what would actually help?', key: 'c', list: C },
+      { tag: 'Step D \u00b7 Sorting', q: 'Is this a request, a boundary \u2014 or is it regulation time?', hint: 'Two honest checks. There is no wrong answer, only a wrong next move.' },
+      { tag: 'Step E \u00b7 The message', q: 'Build the message from parts you choose.', hint: 'Tap a line to include or drop it. The result stays yours.' }
+    ];
+    const meta = stepMeta[step];
+    const preChips = (meta.list || []).map(label => ({ label, style: this.chipStyle(pre[meta.key] === label), pick: () => setPre({ [meta.key]: label }) }));
+    const d1Chips = [{ l: 'Yes, I could take a no', v: 'yes' }, { l: 'No \u2014 a no would wreck me right now', v: 'no' }].map(o => ({ label: o.l, style: this.chipStyle(pre.d1 === o.v), pick: () => setPre({ d1: o.v }) }));
+    const d2Chips = [{ l: 'Something I will do', v: 'mine' }, { l: 'Something they must do', v: 'theirs' }, { l: 'Not sure', v: 'unsure' }].map(o => ({ label: o.l, style: this.chipStyle(pre.d2 === o.v), pick: () => setPre({ d2: o.v }) }));
+    const dReady = !!(pre.d1 && pre.d2);
+    let kind = null, verdict = '';
+    if (dReady) {
+      if (pre.d1 === 'no') { kind = 'Regulation first'; verdict = 'You can\u2019t safely hear a refusal yet \u2014 which means any ask right now will carry force behind it. Regulate first, then ask. That\u2019s not failure; it\u2019s sequencing.'; }
+      else if (pre.d2 === 'mine') { kind = 'Boundary'; verdict = 'This is about what you will do to protect yourself. Boundaries don\u2019t need their agreement \u2014 only your follow-through.'; }
+      else { kind = 'Request'; verdict = 'This is something they can freely accept or refuse. Asking it cleanly \u2014 and surviving either answer \u2014 is the whole move.'; }
+    }
+    const isReg = kind === 'Regulation first';
+    // step E assembly
+    const returnDate = new Date(Date.now() + (s.demo ? 1 : (cfg.cooldownMin || 30)) * 60000);
+    const lines = {
+      care: 'I care about you, and I want to handle this well.',
+      emotion: 'The story in my head right now is \u201c' + (pre.b || 'something bad is happening') + '.\u201d I know that\u2019s the fear talking, and I\u2019m telling you instead of acting on it.',
+      reality: 'I don\u2019t fully agree with how this went, and I\u2019d rather sort it out than win it.',
+      ask: kind === 'Boundary'
+        ? 'I\u2019m stepping away to settle down \u2014 that\u2019s me staying decent, not punishing you.'
+        : 'Could you ' + this.needPhrase(pre.c) + '?',
+      predict: ((cfg.returnTimePref || 'exact') === 'exact' ? 'I\u2019ll check back around ' + this.fmtTime(returnDate) + '.' : 'I\u2019ll come back to this once I\u2019ve settled, today.') + ' Taking space doesn\u2019t mean I hate you or that this is over.'
+    };
+    const partDefs = [['care', 'Care'], ['emotion', 'Name the feeling'], ['reality', 'Honest reality'], ['ask', kind === 'Boundary' ? 'Boundary' : 'Request'], ['predict', 'Predictability']];
+    const msgParts = partDefs.map(([key, label]) => {
+      const on = pre.parts[key];
+      return {
+        label, line: lines[key], check: on ? '\u2713' : '',
+        style: 'display:flex;gap:13px;align-items:flex-start;justify-content:center;padding:12px 14px;border-radius:10px;cursor:pointer;' + (on ? 'background:rgba(152,166,192,.36);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3);border:1px solid rgba(255,255,255,.28);color:#f3f1ee' : 'background:transparent;border:1px dashed rgba(255,255,255,.14);color:#f3f1ee;opacity:.72'),
+        checkStyle: 'flex:none;width:20px;height:20px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;margin-top:1px;' + (on ? 'background:#a786d5;color:#22103a' : 'border:1px solid rgba(255,255,255,.14)'),
+        toggle: () => setPre({ parts: Object.assign({}, pre.parts, { [key]: !on }) })
+      };
+    });
+    const assembled = partDefs.filter(([k]) => pre.parts[k]).map(([k]) => lines[k]).join(' ') || 'Select at least one line above.';
+    // pre nav
+    const canNext = step === 0 ? !!pre.a : step === 1 ? !!pre.b : step === 2 ? !!pre.c : dReady;
+    const preNext = () => {
+      if (step === 3 && isReg) { this.set({ screen: 'red', redStep: 0 }); return; }
+      setPre({ step: step + 1 });
+    };
+    // red zone
+    const redSteps = [
+      { title: 'Temperature', body: 'Cold water on your face, or ice in your fist, for 30 seconds. Cold resets the alarm faster than thinking does.' },
+      { title: 'Move hard', body: 'Sixty seconds of anything that burns \u2014 fast pacing, wall push-ups, stairs. Let the adrenaline land in your muscles instead of your thumbs.' },
+      { title: 'Long exhales', body: 'Follow the circle for five rounds. In through the nose for four, out slow for six. The exhale is the brake.', breath: true },
+      { title: 'Come back to the room', body: 'Out loud: five things you can see, four you can touch, three you can hear. Slow is the point.' }
+    ];
+    const rs = redSteps[Math.min(s.redStep, 3)];
+    const redLinesDirective = ['You are in Pause and Restore.', 'You do not need to resolve this now.', 'Do not send, delete, threaten, confess, or explain.', 'Their response is not required for you to survive this feeling.'];
+    const redLinesWarm = ['This is Pause and Restore, and the pain is real.', 'Real pain still doesn\u2019t need action in the next few minutes.', 'Nothing sent from here will say what you mean.', 'You have survived this exact feeling before.'];
+    const redLines = (warm ? redLinesWarm : redLinesDirective).map(t => ({ t }));
+    const redNext = () => {
+      if (s.redStep >= 3) this.startCooldown();
+      else this.set({ redStep: s.redStep + 1 });
+    };
+    // cooldown
+    const remaining = s.cooldownEnd ? s.cooldownEnd - s.now : 0;
+    const frac = s.cooldownTotal ? Math.max(0, Math.min(1, remaining / s.cooldownTotal)) : 0;
+    // reconnect
+    const reconMsg = 'I\u2019m calmer now. What I need to communicate is ' + (s.rcNeed || '____') + '. What I\u2019m asking for is ' + (s.rcAsk || '____') + '. If that can\u2019t happen, I will ' + (s.rcElse || '____') + '.';
+    const boundaries = [
+      'I\u2019m not able to continue conversations where I\u2019m being yelled at. If it starts again, I\u2019ll step away for the rest of the evening.',
+      'I need tonight without messages. I\u2019ll reach out tomorrow by 10am \u2014 that\u2019s a commitment, not a punishment.',
+      'I care about you, and I\u2019m not discussing this over text anymore. I\u2019m available to talk in person this weekend.'
+    ];
+    const boundaryOpts = boundaries.map((t, i) => ({ t, style: 'text-align:left;font-size:13.5px;line-height:1.5;padding:12px 14px;border-radius:9px;cursor:pointer;' + (s.boundaryPick === i ? 'background:rgba(152,166,192,.36);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3);border:1px solid rgba(167,134,213,.62);color:#f3f1ee' : 'background:transparent;border:1px solid rgba(255,255,255,.14);color:#eaeff4'), pick: () => this.set({ boundaryPick: i }) }));
+    const reconOpts = [
+      { m: 'connect', title: 'Reconnect with one clear request', sub: 'Say the need, make the ask, name what you\u2019ll do either way.' },
+      { m: 'boundary', title: 'State or hold a boundary', sub: 'What you will do \u2014 not what they must do.' },
+      { m: 'space', title: 'Keep taking space', sub: 'More time is a complete answer. So is ending contact.' }
+    ].map(o => ({
+      title: o.title, sub: o.sub,
+      style: 'display:flex;flex-direction:column;gap:4px;text-align:left;padding:16px 18px;border-radius:11px;cursor:pointer;' + (s.reconMode === o.m ? 'background:rgba(152,166,192,.36);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3);border:1px solid rgba(167,134,213,.62);color:#f3f1ee' : 'background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);border:1px solid rgba(255,255,255,.14);color:#f3f1ee'),
+      pick: () => this.set({ reconMode: s.reconMode === o.m ? null : o.m })
+    }));
+    // ---- setup flow ----
+    const durs = s.demo ? [1, 10, 30, 60] : [10, 30, 60, 90];
+    const durOpts = durs.map(m => ({ label: m === 1 ? '1 min (demo)' : m + ' min', style: this.chipStyle((cfg.cooldownMin || 30) === m), pick: () => this.set({ cfg: Object.assign({}, cfg, { cooldownMin: m }) }) }));
+    const setCfg = (key) => (e) => this.set({ cfg: Object.assign({}, cfg, { [key]: e.target.value }) });
+    const sup = this.normalizeSupports(cfg.supports);
+    const setSup = (key, patch) => this.set({ cfg: Object.assign({}, cfg, { supports: Object.assign({}, sup, { [key]: Object.assign({}, sup[key], patch) }) }) });
+    const setEntries = (key, entries) => setSup(key, { entries });
+    const supDefs = [
+      { key: 'talk', title: 'Someone I can talk to normally', blurb: '\u201cI don\u2019t have to explain everything. Hearing from them reminds me that my life is larger than this moment.\u201d', ph: 'Who? A first name is enough', ph2: 'Someone else who fits this', addLabel: '+ Add another person' },
+      { key: 'honest', title: 'Someone I can tell I\u2019m struggling', blurb: '\u201cThey can know that I\u2019m activated and help me avoid acting impulsively.\u201d', ph: 'Who?', ph2: 'Someone else who can hear this', addLabel: '+ Add another person' },
+      { key: 'pro', title: 'A professional or peer-support option', blurb: '\u201cSomeone trained or prepared to listen when personal support is unavailable.\u201d', ph: 'Therapist, clinic, group, or service', ph2: 'Another service or group', addLabel: '+ Add another option' },
+      { key: 'place', title: 'A place that helps me feel connected', blurb: '\u201cA library, caf\u00e9, campus space, support meeting, community center \u2014 somewhere familiar where I\u2019m around people without needing to disclose anything.\u201d', ph: 'Where would you actually go?', ph2: 'Another place you\u2019d go', addLabel: '+ Add another place' }
+    ];
+    const supportOpts = supDefs.map(d => {
+      const on = !!(sup[d.key] && sup[d.key].on);
+      const list = sup[d.key].entries;
+      const entries = list.map((val, i) => ({
+        value: val, placeholder: i === 0 ? d.ph : d.ph2, showRemove: list.length > 1,
+        setValue: (e) => setEntries(d.key, list.map((x, j) => (j === i ? e.target.value : x))),
+        remove: () => setEntries(d.key, list.filter((x, j) => j !== i))
+      }));
+      return {
+        title: d.title, blurb: d.blurb, on, showInput: on, check: on ? '\u2713' : '',
+        entries, canAdd: list.length < 3, addLabel: d.addLabel,
+        add: () => setEntries(d.key, list.concat([''])),
+        wrapStyle: 'border-radius:11px;padding:15px 17px;' + (on ? 'background:rgba(152,166,192,.36);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3);border:1px solid rgba(255,255,255,.28);color:#f3f1ee' : 'background:transparent;border:1px solid rgba(255,255,255,.14);color:#f3f1ee'),
+        checkStyle: 'flex:none;width:22px;height:22px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:12px;margin-top:1px;' + (on ? 'background:#a786d5;color:#22103a' : 'border:1px solid #a8b9ac'),
+        toggle: () => setSup(d.key, { on: !on })
+      };
+    });
+    supportOpts.push({
+      title: 'I don\u2019t have a personal support person right now', blurb: 'This is not a failure. You do not need another person to answer for this plan to work.', on: !!sup.none, showInput: false, check: sup.none ? '\u2713' : '', entries: [], canAdd: false, addLabel: '', add: () => {},
+      wrapStyle: 'border-radius:11px;padding:15px 17px;' + (sup.none ? 'background:rgba(152,166,192,.36);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3);border:1px solid rgba(255,255,255,.28);color:#f3f1ee' : 'background:transparent;border:1px solid rgba(255,255,255,.14);color:#f3f1ee'),
+      checkStyle: 'flex:none;width:22px;height:22px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:12px;margin-top:1px;' + (sup.none ? 'background:#45545a;color:#f3f1ee' : 'border:1px solid #a8b9ac'),
+      toggle: () => this.set({ cfg: Object.assign({}, cfg, { supports: Object.assign({}, sup, { none: !sup.none }) }) }),
+      setValue: () => {}
+    });
+    const filled = (k) => (sup[k].on ? sup[k].entries.filter(x => x && x.trim()) : []);
+    const supportCount = ['talk', 'honest', 'pro', 'place'].reduce((n, k) => n + Math.max(sup[k].on ? 1 : 0, filled(k).length), 0);
+    const namedPerson = (filled('talk')[0] || filled('honest')[0] || '').trim();
+    const consentScript = 'I\u2019m making a plan for times when I\u2019m emotionally overwhelmed. May I list you as someone I can text for ten minutes of normal conversation or grounding? You wouldn\u2019t be responsible for fixing anything, and it\u2019s always okay to tell me you\u2019re unavailable.';
+    const ladder = [
+      { n: '1', title: 'My internal grounding sequence', body: 'The Pause and Restore steps: temperature, movement, long exhales, back to the room.' },
+      { n: '2', title: 'One healthy action that settles me', body: cfg.ladderPlace ? cfg.ladderPlace : 'A concrete thing that makes you feel more connected, grounded, or settled \u2014 set it below.' },
+      { n: '3', title: 'A saved warmline or peer-support contact', body: 'Peer listening for loneliness or distress \u2014 no crisis required.' },
+      { n: '4', title: 'A professional, clinic, or crisis resource', body: 'For what a friend shouldn\u2019t be asked to carry. 988 covers this in the US, any reason, any hour.' },
+      { n: '5', title: 'Emergency help \u2014 immediate physical danger only', body: 'A separate function. Not the answer to loneliness.' }
+    ];
+    const actionBank = [
+      { cat: 'Connect with the world', items: ['Open the curtains', 'Sit near a window for ten minutes', 'Step outside onto the porch or street', 'Go to a familiar public place'] },
+      { cat: 'Move your body', items: ['Walk around the block', 'Stretch on the floor', 'Shake out my arms and hands', 'Take a shower'] },
+      { cat: 'Use sound', items: ['Put on an album I know by heart', 'Start an audiobook', 'Play a familiar podcast', 'Put on rain or nature sounds'] },
+      { cat: 'Care for something', items: ['Feed the pet', 'Water the plants', 'Tidy one small area', 'Make something to eat'] },
+      { cat: 'Meaning or spirituality', items: ['Pray', 'Sit with ten minutes of meditation', 'Read something comforting', 'Write a letter to a higher power'] },
+      { cat: 'Gentle distraction', items: ['Put on a show I\u2019ve seen before', 'Play a simple game', 'Do a puzzle or colour something', 'Cook one thing slowly'] },
+      { cat: 'Sensory grounding', items: ['Hold something warm or cold', 'Wrap up in a blanket', 'Smell something familiar', 'Wash my face with cold water'] }
+    ];
+    const genIdx = s.genIdx;
+    const flatActions = [];
+    actionBank.forEach(g => g.items.forEach(t => flatActions.push({ cat: g.cat, t })));
+    const gen = typeof genIdx === 'number' ? flatActions[genIdx % flatActions.length] : null;
+    const rollAction = () => {
+      let n = Math.floor(Math.random() * flatActions.length);
+      if (typeof genIdx === 'number' && n === genIdx % flatActions.length) n = (n + 1) % flatActions.length;
+      this.setState({ genIdx: n });
+    };
+    const curDoNot = this.normalizeDoNot(cfg.doNot);
+    const setDoNotList = (next) => this.set({ cfg: Object.assign({}, cfg, { doNot: next }) });
+    const hasUrge = (u) => curDoNot.some(x => x.u === u);
+    const toggleUrge = (u, r) => {
+      if (hasUrge(u)) setDoNotList(curDoNot.filter(x => x.u !== u));
+      else setDoNotList(curDoNot.concat([{ u, r: r || '' }]));
+    };
+    const guardCats = this.guardBank().map(c => {
+      const open = s.openCat === c.key;
+      const picked = c.items.filter(it => hasUrge(it[0])).length;
+      return {
+        title: c.title, why: c.why, note: c.note || '', hasNote: !!c.note, open,
+        countLabel: picked ? picked + ' selected' : '',
+        chevStyle: 'flex:none;font-size:14px;color:#dde3ea;transition:transform .18s ease;transform:rotate(' + (open ? '180deg' : '0deg') + ')',
+        wrapStyle: 'border-radius:11px;overflow:hidden;background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.25);-webkit-backdrop-filter:blur(16px) saturate(1.25);color:#f3f1ee;border:1px solid ' + (picked ? 'rgba(255,255,255,.4)' : 'rgba(255,255,255,.14)'),
+        toggleOpen: () => this.setState({ openCat: open ? null : c.key }),
+        items: c.items.map(it => ({ label: it[0], style: this.chipStyle(hasUrge(it[0])), toggle: () => toggleUrge(it[0], it[1]) }))
+      };
+    });
+    const pairs = curDoNot.map((x, i) => ({
+      urge: x.u, repl: x.r,
+      placeholder: this.replFor(x.u) || 'wait until the cooldown ends and decide then',
+      setRepl: (e) => setDoNotList(curDoNot.map((y, j) => (j === i ? { u: y.u, r: e.target.value } : y))),
+      remove: () => setDoNotList(curDoNot.filter((y, j) => j !== i))
+    }));
+    const riskTier = curDoNot.reduce((m, x) => Math.max(m, this.riskyFor(x.u)), 0);
+    const extraBank = ['Move the alcohol, meds, or keys out of reach', 'Leave the room, the house, or the car', 'Hand my keys or wallet to someone for now', 'Put my card or wallet in another room', 'Go somewhere public or around other people', 'Text a support person', 'Open a warmline or 988', 'Switch to a lower-risk activity for twenty minutes', 'Avoid being alone with the trigger', 'Write myself a note about what to do next'];
+    const curExtras = (cfg.extraSteps || []).filter(Boolean);
+    const setExtras = (next) => this.set({ cfg: Object.assign({}, cfg, { extraSteps: next }) });
+    const darkChip = darkChipG;
+    const extraOpts = extraBank.map(label => ({ label, style: (riskTier === 3 ? darkChip : this.chipStyle.bind(this))(curExtras.indexOf(label) > -1), toggle: () => setExtras(curExtras.indexOf(label) > -1 ? curExtras.filter(x => x !== label) : curExtras.concat([label])) }));
+    const signoffBank = ['You wrote this plan on a good day. Trust it.', 'This feeling has arrived before and it left. It will leave again.', 'Nothing you send in the next hour will say what you mean.'];
+    const signoffSuggestions = signoffBank.map(label => ({
+      label, style: 'text-align:left;font-size:14.5px;line-height:1.5;padding:12px 15px;border-radius:9px;cursor:pointer;' + ((cfg.signoff || '') === label ? 'background:rgba(152,166,192,.36);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3);border:1px solid rgba(167,134,213,.62);color:#f3f1ee' : 'background:transparent;border:1px solid rgba(255,255,255,.14);color:#eaeff4'),
+      pick: () => this.set({ cfg: Object.assign({}, cfg, { signoff: label }) })
+    }));
+    const setupMeta = [
+      { tag: 'Setup \u00b7 1 of 4 \u00b7 Connection', q: 'Who or what helps you feel less alone?', hint: 'Choose someone you can contact for ordinary conversation, distraction, grounding, or direct support. They don\u2019t need to solve the problem or agree with you. Choose what you\u2019d genuinely use \u2014 more than one is better than one.' },
+      { tag: 'Setup \u00b7 2 of 4 \u00b7 The pause', q: 'How long should a cooldown last?', hint: 'Long enough for the wave to pass, short enough that you\u2019ll actually honour it. You can always add time later \u2014 you can\u2019t un-send.' },
+      { tag: 'Setup \u00b7 3 of 4 \u00b7 Guardrails', q: 'Your Crisis Guardrails', hint: 'Choose actions you want Pause and Restore to help you pause when you are emotionally overwhelmed.' },
+      { tag: 'Setup \u00b7 4 of 4 \u00b7 Your own words', q: 'A line from calm-you to flooded-you.', hint: 'The first thing Pause and Restore shows you. Write it for the version of you who won\u2019t want to believe it.' }
+    ];
+    const sStep = s.setupStep || 0;
+    const returnOpts = [{ l: 'Yes \u2014 give me an exact time', v: 'exact' }, { l: 'No \u2014 a deadline adds pressure', v: 'soft' }].map(o => ({ label: o.l, style: this.chipStyle((cfg.returnTimePref || 'exact') === o.v), pick: () => this.set({ cfg: Object.assign({}, cfg, { returnTimePref: o.v }) }) }));
+    // ways to reach out, used in red zone + cooldown
+    const reachStyle = 'display:flex;flex-direction:column;gap:3px;text-align:left;flex:1;min-width:180px;background:rgba(152,166,192,.36);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3);border:1px solid rgba(255,255,255,.28);border-radius:10px;padding:13px 15px;cursor:pointer;color:#f3f1ee';
+    const reachOpts = [];
+    const talkList = filled('talk'), honestList = filled('honest');
+    if (sup.talk.on && !talkList.length) reachOpts.push({ label: 'Text someone', sub: 'Ordinary conversation. No explaining.', act: () => window.open('sms:', '_self') });
+    talkList.forEach(who => reachOpts.push({ label: 'Text ' + who, sub: 'Ordinary conversation. No explaining.', act: () => window.open('sms:', '_self') }));
+    if (sup.honest.on && !honestList.length) reachOpts.push({ label: 'Tell someone I\u2019m struggling', sub: 'They already agreed to hear this.', act: () => window.open('sms:', '_self') });
+    honestList.forEach(who => reachOpts.push({ label: 'Tell ' + who + ' I\u2019m struggling', sub: 'They already agreed to hear this.', act: () => window.open('sms:', '_self') }));
+    filled('pro').forEach(who => reachOpts.push({ label: who, sub: 'Beyond what a friend should carry.', act: () => {} }));
+    filled('place').forEach(where => reachOpts.push({ label: 'Go to ' + where, sub: 'Around people, nothing to disclose.', act: () => {} }));
+    if (cfg.warmline) reachOpts.push({ label: cfg.warmline, sub: 'Warmline \u2014 peer listening, no crisis required.', act: () => {} });
+    reachOpts.push({ label: '988 \u2014 talk to someone now', sub: 'Any reason. Call, text, or chat.', act: () => window.open('tel:988', '_self') });
+    reachOpts.forEach(r => { r.style = reachStyle; });
+    return {
+      isHome: s.screen === 'home', isSetup: s.screen === 'setup', isPre: s.screen === 'pre', isRed: s.screen === 'red', isCool: s.screen === 'cooldown', isRecon: s.screen === 'recon',
+      isResources: s.screen === 'resources',
+      utilCards: (this.props.utilityStyle || 'cards') === 'cards',
+      utilLinks: this.props.utilityStyle === 'links',
+      utilList: this.props.utilityStyle === 'list',
+      goResources: () => this.set({ screen: 'resources', resFrom: s.screen, writeOpen: false, copied: false, noteMode: null }),
+      resBack: () => this.set({ screen: s.resFrom === 'setup' ? 'setup' : 'home' }),
+      resBackLabel: s.resFrom === 'setup' ? '\u2190 Back to setup' : '\u2190 Home',
+      goHome: goto('home', { reconMode: null }), goSetup: goto('setup', { setupStep: 0 }), goCooldown: goto('cooldown'),
+      goPre: goto('pre', { pre: { step: 0, a: null, b: null, c: null, d1: null, d2: null, parts: { care: true, emotion: true, reality: false, ask: true, predict: true } } }),
+      rippling: !!s.ripple,
+      rippleOrigin: s.ripple ? 'position:fixed;left:' + s.ripple.x + 'px;top:' + s.ripple.y + 'px;width:0;height:0;z-index:40;pointer-events:none' : 'display:none',
+      redPress: (e) => {
+        const el = e && e.currentTarget; if (!el || s.ripple) return;
+        this._held = el;
+        clearTimeout(this._pt);
+        el.style.transition = 'none';
+        if (!this._orig) this._orig = { bf: el.style.backdropFilter, wbf: el.style.webkitBackdropFilter, bg: el.style.background };
+        el.style.backdropFilter = 'none'; el.style.webkitBackdropFilter = 'none';
+        el.style.background = 'rgba(236,156,132,.4)';
+        el.style.animation = 'none'; void el.offsetWidth;
+        el.style.animation = 'press 170ms cubic-bezier(.3,.7,.3,1) forwards, breathe 2600ms 170ms ease-in-out infinite';
+      },
+      redRelease: (e) => {
+        const el = (e && e.currentTarget) || this._held; if (!el) return;
+        this._held = null;
+        const now = getComputedStyle(el).transform;
+        el.style.animation = 'none';
+        el.style.transform = now;
+        void el.offsetWidth;
+        el.style.transition = 'transform 460ms cubic-bezier(.28,1.5,.42,1)';
+        el.style.transform = 'scale(1) translateZ(0)';
+        clearTimeout(this._pt);
+        this._pt = setTimeout(() => {
+          const o = this._orig || {};
+          el.style.transition = ''; el.style.transform = ''; el.style.animation = '';
+          el.style.backdropFilter = o.bf || 'blur(16px) saturate(1.3)';
+          el.style.webkitBackdropFilter = o.wbf || 'blur(16px) saturate(1.3)';
+          el.style.background = o.bg || 'linear-gradient(146deg,rgba(232,146,120,.34),rgba(206,116,126,.24) 52%,rgba(176,110,140,.22))';
+        }, 480);
+      },
+      goRed: (e) => {
+        if (s.ripple) return;
+        const r = e && e.currentTarget ? e.currentTarget.getBoundingClientRect() : null;
+        const x = e && e.clientX ? e.clientX : (r ? r.left + r.width / 2 : window.innerWidth / 2);
+        const y = e && e.clientY ? e.clientY : (r ? r.top + r.height / 2 : window.innerHeight / 2);
+        this.set({ ripple: { x, y } });
+        clearTimeout(this._rt1); clearTimeout(this._rt2);
+        this._rt1 = setTimeout(() => this.set({ screen: 'red', redStep: 0, writeOpen: false, copied: false, noteMode: null }), 430);
+        this._rt2 = setTimeout(() => this.set({ ripple: null }), 1650);
+      },
+      toggleDemo: () => {
+        const demo = !s.demo;
+        this.set({ demo, cfg: demo ? this.demoCfg() : this.blankCfg() });
+      },
+      demoPillLabel: 'Demo data: ' + (s.demo ? 'on' : 'off'),
+      demoPillStyle: 'font-size:12px;min-height:44px;padding:5px 14px;border-radius:99px;cursor:pointer;white-space:nowrap;display:inline-flex;align-items:center;' + (s.demo ? 'background:rgba(167,134,213,.46);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);color:#f3f1ee;border:1px solid rgba(167,134,213,.6)' : 'background:transparent;color:#dde3ea;border:1px solid rgba(255,255,255,.14)'),
+      homeHeadline: warm ? 'The plan you made on a good day lives here.' : 'You made this plan while calm. Let it drive.',
+      homeSub: 'Intense pain is real \u2014 and it doesn\u2019t require immediate action. The goal isn\u2019t to win the conflict; it\u2019s to keep the next few minutes from causing lasting harm.',
+      cooldownActive: !!s.cooldownEnd, cooldownClock: this.fmtClock(remaining),
+      // setup
+      setupTag: setupMeta[sStep].tag, setupQuestion: setupMeta[sStep].q, setupHint: setupMeta[sStep].hint,
+      setupDots: [0, 1, 2, 3].map(i => ({ style: 'width:22px;height:5px;border-radius:99px;' + (i < sStep ? 'background:#a786d5;color:#22103a' : i === sStep ? 'background:#1d2a30' : 'background:rgba(123,138,163,.34)') })),
+      setupIsSupport: sStep === 0, setupIsCooldown: sStep === 1, setupIsDoNot: sStep === 2, setupIsSignoff: sStep === 3,
+      setupBack: () => (sStep === 0 ? this.set({ screen: 'home' }) : this.set({ setupStep: sStep - 1 })),
+      setupBackLabel: sStep === 0 ? '\u2190 Home' : '\u2190 Back',
+      setupNext: () => {
+        const personPicked = ['talk', 'honest', 'pro'].some(k => sup[k] && sup[k].on);
+        if (sStep === 0 && personPicked && !s.showSupportWarn) { this.setState({ showSupportWarn: true }); return; }
+        this.set(sStep === 3 ? { screen: 'home', showSupportWarn: false } : { setupStep: sStep + 1, showSupportWarn: false });
+      },
+      showSupportWarn: !!s.showSupportWarn,
+      warnBack: () => this.setState({ showSupportWarn: false }),
+      warnContinue: () => { this.setState({ showSupportWarn: false }); this.set({ setupStep: 1 }); },
+      setupNextLabel: sStep === 3 ? 'Save and finish' : 'Continue',
+      setupNextStyle: 'border:none;border-radius:10px;padding:15px;font-size:15px;font-weight:600;cursor:pointer;margin-top:6px;background:#a786d5;color:#22103a',
+      supportOpts, showLadder: !!sup.none, ladder,
+      cfgLadderPlace: cfg.ladderPlace || '', setLadderPlace: setCfg('ladderPlace'),
+      actionCats: actionBank.map(g => ({ cat: g.cat, list: g.items.join(' \u00b7 ') })),
+      hasGen: !!gen, genCat: gen ? gen.cat : '', genText: gen ? gen.t : '',
+      rollAction, rollLabel: gen ? 'Try another' : 'Generate an option',
+      useGen: () => { if (gen) this.set({ cfg: Object.assign({}, cfg, { ladderPlace: gen.t }) }); },
+      showConsent: !!namedPerson, consentScript, copyConsent: () => this.copy(consentScript),
+      cfgWarmline: cfg.warmline || '', setWarmline: setCfg('warmline'),
+      crisisOpen: !!s.crisisOpen, toggleCrisisCard: () => this.setState({ crisisOpen: !s.crisisOpen }),
+      crisisCardSub: cfg.warmline ? 'Warmline saved \u00b7 988 \u00b7 RAINN \u00b7 DV hotline \u00b7 211 \u00b7 911' : 'Save a warmline, and see what each national line actually covers.',
+      crisisChevStyle: 'flex:none;font-size:14px;color:#dde3ea;transition:transform .18s ease;transform:rotate(' + (s.crisisOpen ? '180deg' : '0deg') + ')',
+      durOpts, returnOpts,
+      returnNote: (cfg.returnTimePref || 'exact') === 'exact'
+        ? 'Your messages will include a specific check-back time. Ambiguity is usually worse than waiting.'
+        : 'Your messages will say you\u2019ll come back without naming a clock time.',
+      signoffSuggestions, guardCats, pairs,
+      showExtra: riskTier > 0, extraOpts,
+      extraTitle: riskTier === 3 ? 'This urge needs a stronger backup plan' : 'A timer helps — add one more layer here',
+      extraBody: riskTier === 3
+        ? 'You\u2019ve named something that could put you or someone else at risk. A cooldown still helps \u2014 it just works best alongside a concrete safety step. Decide now what you\u2019ll move away from, who you\u2019ll contact, or where you\u2019ll go to make the next hour safer.'
+        : 'You\u2019ve named an urge that may need more support than a cooldown alone. Pause and Restore can still help. To make it more effective, choose one extra protection step now.',
+      extraHint: 'All of these are free and most work alone \u2014 no therapist, money, or perfect support system required. Pick anything that makes acting on the urge harder.',
+      extraCustom: s.extraCustom || '',
+      setExtraCustom: (e) => this.setState({ extraCustom: e.target.value }),
+      addExtraCustom: () => { const v = (s.extraCustom || '').trim(); if (v && curExtras.indexOf(v) === -1) { setExtras(curExtras.concat([v])); this.setState({ extraCustom: '' }); } },
+      extraWrapStyle: 'border-radius:12px;padding:20px 22px;display:flex;flex-direction:column;gap:12px;' + (riskTier === 3 ? 'background:#1b2c42;color:#f3f1ee' : 'background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);color:#f3f1ee;border:1px solid rgba(255,255,255,.14)'),
+      extraBodyStyle: 'font-size:13.5px;line-height:1.6;text-wrap:pretty;color:' + (riskTier === 3 ? '#dde3ea' : '#dde3ea') + "",
+      extraHintStyle: 'font-size:12.5px;line-height:1.5;text-wrap:pretty;color:' + (riskTier === 3 ? '#dde3ea' : '#dde3ea') + "",
+      needsRepl: pairs.some(p => !p.repl.trim()),
+      guardHelpOpen: !!s.guardHelpOpen,
+      toggleGuardHelp: () => this.setState({ guardHelpOpen: !s.guardHelpOpen }),
+      guardHelpChevStyle: 'flex:none;font-size:14px;color:#dde3ea;transition:transform .18s ease;transform:rotate(' + (s.guardHelpOpen ? '180deg' : '0deg') + ')',
+      hasPairs: pairs.length > 0, pairCount: pairs.length + ' pattern' + (pairs.length === 1 ? '' : 's') + ' named',
+      customUrge: s.customUrge || '',
+      setCustomUrge: (e) => this.setState({ customUrge: e.target.value }),
+      addCustomUrge: () => { const v = (s.customUrge || '').trim(); if (v && !hasUrge(v)) { setDoNotList(curDoNot.concat([{ u: v, r: '' }])); this.setState({ customUrge: '' }); } },
+      cfgSignoff: cfg.signoff || '', setSignoff: setCfg('signoff'),
+      // pre
+      preDots: [0, 1, 2, 3, 4].map(i => ({ style: 'width:22px;height:5px;border-radius:99px;' + (i < step ? 'background:#a786d5;color:#22103a' : i === step ? 'background:#1d2a30' : 'background:rgba(123,138,163,.34)') })),
+      preStepTag: meta.tag, preQuestion: meta.q, preHint: meta.hint,
+      preShowChips: step <= 2, preChips, preShowD: step === 3, d1Chips, d2Chips, dReady,
+      dVerdictKind: kind || '', dVerdictText: verdict,
+      dVerdictStyle: 'display:flex;flex-direction:column;gap:8px;padding:18px 20px;border-radius:11px;' + (isReg ? 'background:#1b2c42;color:#f3f1ee' : 'background:rgba(123,138,163,.34);backdrop-filter:blur(16px) saturate(1.2);-webkit-backdrop-filter:blur(16px) saturate(1.2);color:#f3f1ee;border:1px solid rgba(255,255,255,.14)'),
+      preShowE: step === 4, msgParts, assembled,
+      copyAssembled: () => this.copy(assembled), copyLabel: s.copied ? 'Copied \u2713' : 'Copy message',
+      eDone: goto('home'),
+      preShowNext: step < 4, preNextLabel: step === 3 ? (isReg ? 'Regulate first \u2014 start Pause and Restore' : 'Build the message') : 'Continue',
+      preNextStyle: 'border:none;border-radius:10px;padding:15px;font-size:15px;font-weight:600;cursor:pointer;margin-top:4px;' + (canNext ? (step === 3 && isReg ? 'background:#1b2c42;color:#f3f1ee' : 'background:#a786d5;color:#22103a') : 'background:rgba(123,138,163,.22);color:#d3dde6;opacity:.85;pointer-events:none'),
+      preNext,
+      // red
+      redLines, hasSignoff: !!cfg.signoff, signoff: cfg.signoff || '',
+      redStepNum: Math.min(s.redStep, 3) + 1, redStepsLeft: (3 - Math.min(s.redStep, 3)) + ' after this, then the timer',
+      redTitle: rs.title, redBody: rs.body, redBreath: !!rs.breath,
+      redNext, redNextLabel: s.redStep >= 3 ? 'Done \u2014 start the cooldown' : 'Done \u2014 next',
+      reachOpts,
+      coolNote: (cfg.returnTimePref || 'exact') === 'exact'
+        ? 'Nothing needs to be decided before this ends. The timer survives closing the app \u2014 check back at ' + this.fmtTime(new Date(s.cooldownEnd || Date.now())) + '.'
+        : 'Nothing needs to be decided before this ends. The timer survives closing the app. Come back when it\u2019s done, not by a clock.',
+      toggleWrite: () => this.setState({ writeOpen: !s.writeOpen }),
+      writeOpen: s.writeOpen, note: s.note, setNote: (e) => this.set({ note: e.target.value }),
+      hasNoteText: !!(s.note || '').trim(),
+      noteOverlayOpen: !!s.noteMode,
+      nmConfirm: s.noteMode === 'confirm', nmDestroying: s.noteMode === 'destroying', nmDestroyed: s.noteMode === 'destroyed',
+      nmMenu: s.noteMode === 'menu', nmBloom: s.noteMode === 'bloom', nmDistill: s.noteMode === 'distill', nmNeed: s.noteMode === 'need',
+      askDestroy: () => this.setState({ noteMode: 'confirm' }),
+      closeNote: () => this.setState({ noteMode: null }),
+      openTransform: () => this.setState({ noteMode: 'menu' }),
+      openBloom: () => this.setState({ noteMode: 'bloom' }, () => requestAnimationFrame(() => this.drawBloom())),
+      openDistill: () => this.setState({ noteMode: 'distill', distillPicks: [] }),
+      openNeed: () => this.setState({ noteMode: 'need', needPicks: [] }),
+      backToMenu: () => this.setState({ noteMode: 'menu' }),
+      doDestroy: () => {
+        this.setState({ noteMode: 'destroying', destroyText: s.note });
+        setTimeout(() => this.set({ note: '', noteMode: 'destroyed', writeOpen: false }), 1900);
+      },
+      destroyPreview: (s.destroyText || s.note || '').slice(0, 900),
+      bloomRef: this.bloomRef, downloadBloom: () => this.downloadBloom(),
+      distillWords: (s.note || '').trim().split(/\s+/).filter(Boolean).map((w, i) => {
+        const picks = s.distillPicks || [];
+        const on = picks.indexOf(i) > -1;
+        return {
+          w, style: 'font-size:15px;padding:5px 9px;border-radius:7px;cursor:pointer;' + (on ? 'background:rgba(152,166,192,.36);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3);color:#f3f1ee;border:1px solid rgba(255,255,255,.28)' : 'background:transparent;color:#dde3ea;border:1px solid rgba(238,244,243,.16)'),
+          toggle: () => this.setState({ distillPicks: on ? picks.filter(x => x !== i) : picks.concat([i]) })
+        };
+      }),
+      distilled: (s.note || '').trim().split(/\s+/).filter(Boolean).filter((w, i) => (s.distillPicks || []).indexOf(i) > -1).join(' '),
+      hasDistilled: (s.distillPicks || []).length > 0,
+      needChips: C.map(label => {
+        const picks = s.needPicks || [];
+        const on = picks.indexOf(label) > -1;
+        return { label, style: darkChipG(on), toggle: () => this.setState({ needPicks: on ? picks.filter(x => x !== label) : picks.concat([label]) }) };
+      }),
+      needStatement: (s.needPicks || []).length ? 'Underneath all of this, what I need is ' + (s.needPicks || []).map(x => x.replace(/^Acknowledgment/, 'acknowledgment').replace(/^An /, 'an ').replace(/^A /, 'a ').replace(/^Reassurance/, 'reassurance').replace(/^Consistency/, 'consistency').replace(/^Space/, 'space').replace(/^To /, 'to ')).join(', ') + '.' : '',
+      hasNeed: (s.needPicks || []).length > 0,
+      useNeedInReconnect: () => {
+        const txt = (s.needPicks || []).join('; ');
+        this.setState({ rcNeed: txt, noteMode: null });
+      },
+      doNotPairs: curDoNot.map(x => ({ urge: x.u, repl: x.r || this.replFor(x.u), hasRepl: !!(x.r || this.replFor(x.u)) })),
+      hasDoNot: curDoNot.length > 0,
+      hasExtras: curExtras.length > 0, extras: curExtras.map(t => ({ t })),
+      // cooldown
+      coolBarStyle: 'height:100%;background:#a786d5;border-radius:99px;transition:width .3s linear;width:;color:#f3f1ee' + (frac * 100).toFixed(1) + '%',
+      returnTime: this.fmtTime(new Date(s.cooldownEnd || Date.now())),
+      addTen: () => this.set({ cooldownEnd: (s.cooldownEnd || Date.now()) + 600000, cooldownTotal: s.cooldownTotal + 600000 }),
+      holdStart: () => this.setState({ holdActive: true }),
+      holdStop: () => this.setState({ holdActive: false, holdPct: 0 }),
+      holdLabel: s.holdPct > 0 ? 'Keep holding\u2026' : 'Hold 3s to end early',
+      holdBtnStyle: 'position:relative;overflow:hidden;margin-top:10px;background:transparent;border:1px solid rgba(255,255,255,.14);border-radius:9px;padding:12px 22px;font-size:13px;color:#dde3ea;cursor:pointer;touch-action:none;user-select:none;-webkit-user-select:none;font-family:\'Literata\',Georgia,serif',
+      holdFillStyle: 'position:absolute;inset:0;background:rgba(211,192,236,.85);width:' + s.holdPct + '%;transition:width .25s linear',
+      // recon
+      hasNote: !!s.note.trim(), noteVerb: s.writeOpen ? 'Hide it.' : 'Reread it before sending anything.',
+      reconOpts, reconIsConnect: s.reconMode === 'connect', reconIsBoundary: s.reconMode === 'boundary', reconIsSpace: s.reconMode === 'space',
+      rcNeed: s.rcNeed, rcAsk: s.rcAsk, rcElse: s.rcElse,
+      setRcNeed: (e) => this.setState({ rcNeed: e.target.value }), setRcAsk: (e) => this.setState({ rcAsk: e.target.value }), setRcElse: (e) => this.setState({ rcElse: e.target.value }),
+      reconMsg, copyRecon: () => this.copy(reconMsg),
+      boundaryOpts, copyBoundary: () => this.copy(boundaries[s.boundaryPick]),
+      startAnotherCooldown: () => this.startCooldown()
+    };
+  }
+}
+</script>
+</body>
+</html>
